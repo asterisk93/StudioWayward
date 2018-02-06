@@ -6,6 +6,7 @@ scale: 1/100
 date: 2015-12-13
 folder: exia
 animate: https://i.imgur.com/3iNIJfz.gif
+preview: https://i.imgur.com/iE7mUgH.gif
 photos:
 - path: 1.jpg
 - path: 2.jpg

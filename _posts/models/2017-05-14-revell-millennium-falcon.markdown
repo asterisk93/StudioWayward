@@ -6,6 +6,7 @@ scale: NA
 date: 2017-05-14
 folder: falcon
 animate: https://i.imgur.com/nKR6ZAQ.gif
+preview: https://i.imgur.com/LWYD5N6.gif
 photos:
 - path: 1.jpg
 - path: 2.jpg

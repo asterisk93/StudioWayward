@@ -5,7 +5,8 @@ title: Nissan Fairlady 300ZX Turbo
 scale: 1/24
 date: 2017-12-24
 folder: fairlady
-animate: https://i.imgur.com/1bQi9mn.gifv
+animate: https://i.imgur.com/1bQi9mn.gif
+preview: https://i.imgur.com/rjw2n4E.gif
 photos:
 - path: 1.jpg
 - path: 2.jpg

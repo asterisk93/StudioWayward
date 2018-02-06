@@ -6,6 +6,7 @@ scale: 1/144
 date: 2017-07-10
 folder: wing-zero
 animate: https://i.imgur.com/voSe1vu.gif
+preview: https://i.imgur.com/s1XOBDw.gif
 photos:
 - path: 1.jpg
 - path: 2.jpg

@@ -6,6 +6,7 @@ scale: 1/144
 date: 2017-10-18
 folder: emergency-repairs
 animate: https://i.imgur.com/h2r8NMO.gif
+preview: https://i.imgur.com/ioxVe37.gif
 photos:
 - path: 1.jpg
 - path: 2.jpg

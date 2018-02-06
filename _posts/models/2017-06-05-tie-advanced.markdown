@@ -6,6 +6,7 @@ scale: 1/72
 date: 2017-06-05
 folder: tie-advanced
 animate: https://i.imgur.com/KoUeoon.gif
+preview: https://i.imgur.com/AYguYBS.gif
 photos:
 - path: 1.jpg
 - path: 2.jpg

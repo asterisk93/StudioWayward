@@ -6,6 +6,7 @@ scale: 1/144
 date: 2017-07-04
 folder: red-frame
 animate: https://i.imgur.com/NgGev4Z.gif
+preview: https://i.imgur.com/uwXumm8.gif
 photos:
 - path: 1.jpg
 - path: 2.jpg
