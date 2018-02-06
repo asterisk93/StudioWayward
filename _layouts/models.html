@@ -1,0 +1,67 @@
+---
+layout: wrapper
+---
+
+<div id="mw-container">
+
+{% for post in site.posts %}
+	{% if post.type contains "model" and post.folder contains page.featured %}
+		<div id="mw-featuredContainer">
+			<a href="">
+				<div id="mw-featuredText">
+					<span>Featured Project:</span>
+				</div>
+
+				<div id="mw-jumbotron">
+					<img id="mw-jumboIMG" src="{{ post.animate }}">	
+				</div>
+
+				<div id="mw-featTitle">
+					<span>{{ post.title }}</span>
+				</div>
+
+				<div id="mw-featScale">
+					<span>Scale: {{ post.scale }}</span>
+				</div>
+
+				<div id="mw-featBlurb">
+					<span>{{ post.content }}</span>
+				</div>
+
+			</a>
+		</div>
+	{% endif %}
+{% endfor %}
+
+<div id="mw-gallery">
+	
+	<div id="mw-galleryHeading">
+		<span>Other Projects:</span>
+	</div>
+
+	<div id="mw-galleryContainer">
+
+		{% for post in site.posts %}
+			{% if post.type contains "model" %}
+				{% unless post.folder contains page.featured %}
+		
+					<div class="mw-galleryItem">
+			
+						<a href="">
+							
+							<img class="mw-itemPreview" src="{{site.baseurl}}/assets/images/models/{{post.folder}}/preview.png" onmouseover="this.src='{{site.baseurl}}/assets/images/models/{{post.folder}}/preview.gif'" onmouseout="this.src='{{site.baseurl}}/assets/images/models/{{post.folder}}/preview.png'">
+							
+							<div class="mw-itemTitle">
+								<span>{{post.title}}</span>
+							</div>
+						</a>
+
+					</div>
+				{% endunless %}
+			{% endif %}
+		{% endfor %}
+
+	</div>
+</div>
+
+</div>

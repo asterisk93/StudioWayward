@@ -1,0 +1,278 @@
+body{
+	background-color: #FFFFFF;
+	font-size: 10px;
+}
+
+a {
+	text-decoration: none;
+}
+
+@font-face{
+	font-family: 'steagisler';	
+	src: url('fonts/Steagisler.otf');
+}
+
+
+/**
+---------------------------------SW Homepage---------------------------------
+**/
+
+#home-banner{
+	text-align: center;
+	margin: auto 0;
+	margin-top: 40px;
+	margin-bottom: 60px;
+}
+
+#home-bannerImg{
+	width: 20%;
+}
+
+#home-triContainer{
+	width: 60%;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.home-triButton{
+	text-align: center;
+	margin: 10px;
+}
+
+#home-modelButtonImg{
+	width: 100%;
+	transition: opacity 0.5s ease-in-out;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-webkit-backface-visibility: hidden;
+	opacity: 0.9;
+}
+
+#home-modelButtonImg:hover{
+	opacity: 1;
+}
+
+#home-photoButtonImg{
+	width: 100%;
+	transition: opacity 0.5s ease-in-out;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-webkit-backface-visibility: hidden;
+	opacity: 0.9;		
+}
+
+#home-photoButtonImg:hover{
+	opacity: 1;
+}
+
+#home-bsrButtonImg{
+	width: 100%;
+	transition: opacity 0.5s ease-in-out;
+	-webkit-transition: opacity 0.5s ease-in-out;
+	-webkit-backface-visibility: hidden;
+	opacity: 0.9;	
+}
+
+#home-bsrButtonImg:hover{
+	opacity: 1;
+}
+
+#home-navContainer{
+	width: 40%;
+	text-align: center;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin-top: 60px;
+}
+
+#home-blog{
+	padding: 0 20px;
+	border-left-style: solid;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px; 
+
+}
+
+.home-navButton{
+	padding: 0 20px;
+	border-left-style: solid;
+
+}
+
+#home-contact{
+	padding: 0 20px;
+	border-left-style: solid;
+	border-right-style: solid;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px; 
+}
+
+.home-navText{
+	font-family: helvetica;
+	font-weight: bold;
+	font-size: 0.8vw;
+	text-transform: uppercase;
+}
+
+a .home-navText{
+	color: #000000;
+}
+
+.home-navText:hover{
+	color: #aa0000;
+}
+
+
+/**
+---------------------------------Model Works Homepage---------------------------------
+**/
+
+.mw-preload{
+	display: none;
+}
+
+#mw-container{
+	width: 90%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 0 auto;
+}
+
+#mw-featuredContainer{
+	width: 50%;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 5px;
+	padding: 15px;
+	margin-top: 30px;
+	border-color: #CCCCCC;
+	background-color: white;
+}
+
+#mw-featuredContainer:hover{
+	border-color: black;
+}
+
+#mw-featuredText{
+	font-family: steagisler;
+	font-size: 1.7vw;
+	text-transform: uppercase;
+}
+
+a #mw-featuredText{
+	color: #4a4a4a;
+}
+
+#mw-jumbotron{
+	text-align: center;
+	border-style: solid;
+	border-width: 0px;
+	border-radius: 5px;
+	padding: 15px;
+	background-color: #BBBBBB;
+}
+
+#mw-jumboIMG{
+	width: 80%;
+}
+
+#mw-featTitle{
+	font-family: steagisler;
+	font-size: 1.2vw;
+	text-transform: uppercase;
+	padding-top: 10px;	
+}
+
+a #mw-featTitle{
+	color: #4a4a4a;
+}
+
+#mw-featScale{
+	font-family: steagisler;
+	font-size: 1.0vw;
+	text-transform: uppercase;
+	padding-top: 10px;
+}
+
+a #mw-featScale{
+	color: #4a4a4a;	
+}
+
+#mw-featBlurb{
+	font-family: helvetica;
+	font-size: 0.8vw;
+}
+
+a #mw-featBlurb{
+	color: #4a4a4a;
+}
+
+#mw-gallery{
+	width: 40%;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 5px;
+	padding: 15px;
+	margin-top: 30px;
+	border-color: #CCCCCC;
+	background-color: white;
+	margin-left: 30px;
+}
+
+#mw-galleryHeading{
+	font-family: steagisler;
+	font-size: 1.5vw;
+	text-transform: uppercase;
+	color: #4a4a4a;	
+}
+
+#mw-galleryContainer{
+	text-align: center;
+	border-style: solid;
+	border-width: 0px;
+	border-radius: 5px;
+	padding: 15px;
+	background-color: #BBBBBB;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;	
+}
+
+.mw-galleryItem{
+	text-align: center;
+	width: 40%;
+	padding: 15px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #BBBBBB;
+	border-radius: 5px;
+	background-color: white;
+	margin: 15px;
+}
+
+.mw-galleryItem:hover{
+	border-color: black;
+}
+
+.mw-itemPreview{
+	width: 90%;
+}
+
+.mw-itemTitle{
+	font-family: steagisler;
+	font-size: 1vw;
+	text-transform: uppercase;
+	padding-top: 5px;
+}
+
+a .mw-itemTitle{
+	color: #4a4a4a;
+}

@@ -1,0 +1,51 @@
+
+{% if page.header contains "models" or page.type contains "model" %}
+<div id="header-bar">
+	<img id="header-banner" src="{{site.baseurl}}/assets/images/models/banner.png">
+</div>
+
+
+
+<style type="text/css">
+	
+	body{
+		background-color: #DDDDDD;
+	}
+	#header-bar{
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 15px;
+		text-align: left;
+		background-color: white;
+	}
+
+	#header-banner{
+		height: 80px;
+	}
+</style>
+
+{% elsif page.header contains "photography" or page.type contains "photography" %}
+
+<div id="header-bar">
+	<img id="header-banner" src="{{site.baseurl}}/assets/images/photography/banner.png">
+</div>
+
+
+<style type="text/css">
+	
+	body{
+		background-color: #1a1a1a;
+	}
+	#header-bar{
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 5px;
+		text-align: left;
+		background-color: black;
+	}
+
+	#header-banner{
+		height: 60px;
+	}
+</style>
+{% endif %}
