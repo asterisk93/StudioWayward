@@ -1,0 +1,125 @@
+---
+layout: wrapper
+---
+
+
+{% if page.type contains "model" %}
+
+<style type="text/css">
+	:root:before {
+		content: url({{ page.animate }})
+
+		{% for img in page.photos %}
+		content: url({{site.baseurl}}/assets/images/models/{{page.folder}}/{{img.path}})
+		{% endfor %}
+	}
+</style>
+
+<div id="mw-postInfo">
+
+	<div id="mw-postTitle">
+		<span>{{ page.title }}</span>
+	</div>
+
+</div>
+
+<div id="mw-postGallery">
+	
+	<div class="mw-postSlide fade">
+		
+		<div class="mw-slideNum">
+			<span>360</span>
+		</div>
+
+		<img class="mw-slideIMG" src="{{ page.animate }}">
+
+	</div>
+
+	{% for img in page.photos %}
+
+		<div class="mw-postSlide fade">
+		
+			<div class="mw-slideNum">
+				<span>{{ forloop.index }}/{{ forloop.length }}</span>
+			</div>
+
+			<img class="mw-slideIMG" src="{{site.baseurl}}/assets/images/models/{{page.folder}}/{{img.path}}">
+
+		</div>
+
+	{% endfor %}
+
+	<a class="prev" onclick="slideNav(-1)">&#10094;</a>
+
+	<a class="next" onclick="slideNav(+1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+
+	<span class="dot" onclick="currentSlide(1)"></span>
+
+	{% for img in page.photos %}
+
+		<span class="dot" onclick="currentSlide({{forloop.index}} +1)"></span>
+
+	{% endfor %}
+
+</div>
+
+<script type="text/javascript">
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	function slideNav(n) {
+		showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+		showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+		var i;
+		var slides = document.getElementsByClassName("mw-postSlide");
+		var dots = document.getElementsByClassName("dot");
+
+		if (n > slides.length){
+			slideIndex = 1;
+		}
+
+		if (n < 1){
+			slideIndex = slides.length;
+		}
+
+		for (i = 0; i < slides.length; i++){
+			slides[i].style.display = "none";
+		}
+
+		for (i = 0; i < dots.length; i++){
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+
+		slides[slideIndex - 1].style.display = "block";
+		dots[slideIndex - 1].className += " active";
+	}
+</script>
+
+<div id="mw-postInfo">
+
+	<div id="mw-postScale">
+		<span>Scale: {{ page.scale }}</span>
+	</div>
+
+	<div id="mw-postBlurb">
+		<span>{{ content }}</span>
+	</div>
+
+</div>
+
+
+{% elsif post.type contains "photo" %}
+
+
+{% endif %}

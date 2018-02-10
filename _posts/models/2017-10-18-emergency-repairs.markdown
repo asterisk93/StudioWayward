@@ -1,6 +1,7 @@
 ---
 layout: post
 type: model
+permalink: /:title
 title: Emergency Repairs - GBWC 2017
 scale: 1/144
 date: 2017-10-18

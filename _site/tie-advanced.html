@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Vader's TIE Advanced Fighter</title>
+	<meta name="description" content="Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.">
+	<link rel="stylesheet" href="/StudioWayward/assets/css/style.css">
+
+</head>
+
+<body>
+
+	
+		
+
+<div id="header-bar">
+	<a href="/StudioWayward/models">
+		<img id="header-banner" src="/StudioWayward/assets/images/models/banner.png">
+	</a>
+</div>
+
+
+
+<style type="text/css">
+	
+	body{
+		background-color: #DDDDDD;
+	}
+	#header-bar{
+		padding-top: 5px;
+		padding-bottom: 5px;
+		padding-left: 15px;
+		text-align: left;
+		background-color: white;
+	}
+
+	#header-banner{
+		height: 80px;
+	}
+</style>
+
+
+	
+
+	
+
+<style type="text/css">
+	:root:before {
+		content: url(https://i.imgur.com/KoUeoon.gif)
+
+		
+		content: url(/StudioWayward/assets/images/models/tie-advanced/1.jpg)
+		
+		content: url(/StudioWayward/assets/images/models/tie-advanced/2.jpg)
+		
+		content: url(/StudioWayward/assets/images/models/tie-advanced/3.jpg)
+		
+	}
+</style>
+
+<div id="mw-postInfo">
+
+	<div id="mw-postTitle">
+		<span>Vader's TIE Advanced Fighter</span>
+	</div>
+
+</div>
+
+<div id="mw-postGallery">
+	
+	<div class="mw-postSlide fade">
+		
+		<div class="mw-slideNum">
+			<span>360</span>
+		</div>
+
+		<img class="mw-slideIMG" src="https://i.imgur.com/KoUeoon.gif">
+
+	</div>
+
+	
+
+		<div class="mw-postSlide fade">
+		
+			<div class="mw-slideNum">
+				<span>1/3</span>
+			</div>
+
+			<img class="mw-slideIMG" src="/StudioWayward/assets/images/models/tie-advanced/1.jpg">
+
+		</div>
+
+	
+
+		<div class="mw-postSlide fade">
+		
+			<div class="mw-slideNum">
+				<span>2/3</span>
+			</div>
+
+			<img class="mw-slideIMG" src="/StudioWayward/assets/images/models/tie-advanced/2.jpg">
+
+		</div>
+
+	
+
+		<div class="mw-postSlide fade">
+		
+			<div class="mw-slideNum">
+				<span>3/3</span>
+			</div>
+
+			<img class="mw-slideIMG" src="/StudioWayward/assets/images/models/tie-advanced/3.jpg">
+
+		</div>
+
+	
+
+	<a class="prev" onclick="slideNav(-1)">&#10094;</a>
+
+	<a class="next" onclick="slideNav(+1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center">
+
+	<span class="dot" onclick="currentSlide(1)"></span>
+
+	
+
+		<span class="dot" onclick="currentSlide(1 +1)"></span>
+
+	
+
+		<span class="dot" onclick="currentSlide(2 +1)"></span>
+
+	
+
+		<span class="dot" onclick="currentSlide(3 +1)"></span>
+
+	
+
+</div>
+
+<script type="text/javascript">
+	var slideIndex = 1;
+	showSlides(slideIndex);
+
+	function slideNav(n) {
+		showSlides(slideIndex += n);
+	}
+
+	function currentSlide(n) {
+		showSlides(slideIndex = n);
+	}
+
+	function showSlides(n) {
+		var i;
+		var slides = document.getElementsByClassName("mw-postSlide");
+		var dots = document.getElementsByClassName("dot");
+
+		if (n > slides.length){
+			slideIndex = 1;
+		}
+
+		if (n < 1){
+			slideIndex = slides.length;
+		}
+
+		for (i = 0; i < slides.length; i++){
+			slides[i].style.display = "none";
+		}
+
+		for (i = 0; i < dots.length; i++){
+			dots[i].className = dots[i].className.replace(" active", "");
+		}
+
+		slides[slideIndex - 1].style.display = "block";
+		dots[slideIndex - 1].className += " active";
+	}
+</script>
+
+<div id="mw-postInfo">
+
+	<div id="mw-postScale">
+		<span>Scale: 1/72</span>
+	</div>
+
+	<div id="mw-postBlurb">
+		<span><p>It was a treat to be able to revisit one of my favorite gundam designs. The original 1/100 Astray Red Frame was one of the first model kits I’d ever built, albeit quite poorly, almost a decade ago, so I’m happy to have been able to give it a proper go this time. Weathered in black, he stands on a scratchbuilt balsa wood platform, which I carved up to look like jagged stone.</p>
+</span>
+	</div>
+
+</div>
+
+
+
+</body>
+
+</html>

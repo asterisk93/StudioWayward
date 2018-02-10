@@ -276,3 +276,156 @@ a #mw-featBlurb{
 a .mw-itemTitle{
 	color: #4a4a4a;
 }
+
+/**
+---------------------------------Model Works Post---------------------------------
+**/
+
+#mw-postInfo{
+	width: 50%;
+	margin: 0 auto;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 5px;
+	padding: 15px;
+	margin-top: 30px;
+	border-color: #CCCCCC;
+	background-color: white;
+	color: #4a4a4a;
+}
+
+#mw-postTitle{
+	font-family: steagisler;
+	font-size: 1.8vw;
+	text-transform: uppercase;
+	padding-top: 10px;
+	color: #4a4a4a;	
+	text-align: center;
+}
+
+#mw-postScale{
+	font-family: steagisler;
+	font-size: 1.25vw;
+	text-transform: uppercase;
+	padding-top: 10px;
+	color: #4a4a4a;
+	text-align: center;
+}
+
+#mw-postBlurb{
+	font-family: helvetica;
+	font-size: 1.0vw;
+	color: #4a4a4a;
+}
+
+#mw-postGallery{
+	box-sizing: border-box;
+	max-width: 60%;
+	position: relative;
+	margin: auto;
+	margin-top: 30px;
+	background-color: #BBBBBB;
+	padding: 20px; 
+	border-radius: 10px;
+}
+
+.mw-postSlide{
+	box-sizing: border-box;
+	text-align: center;
+	display: none;
+}
+
+.mw-slideNum{
+	font-family: helvetica;
+	font-size: 25px;
+	background-color: rgba(100,100,100,0.8);
+	font-weight: bold;
+	border-radius: 0 0 5px 5px;
+}
+
+.prev{
+	box-sizing: border-box;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	border-radius: 0 3px 3px 0;
+	left: 0; 
+	background-color: rgba(100,100,100,0.8);
+}
+
+.next{
+	box-sizing: border-box;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	width: auto;
+	margin-top: -22px;
+	padding: 16px;
+	color: white;
+	font-weight: bold;
+	font-size: 18px;
+	transition: 0.6s ease;
+	right: 0;
+	border-radius: 3px 0 0 3px;
+	background-color: rgba(100,100,100,0.8);
+}
+
+.prev:hover, .next:hover{
+	background-color: rgba(0,0,0,0.8);
+}
+
+.mw-slideNum{
+	box-sizing: border-box;
+	color: #f2f2f2;
+	font-size: 12px;
+	padding: 8px 12px;
+	position: absolute;
+	top: 0;
+}
+
+.mw-slideIMG{
+	text-align: center;
+	margin: 0 auto;
+	height: 610px;
+}
+
+.dot{
+	box-sizing: border-box;
+	cursor: pointer;
+	height: 15px;
+	width: 15px;
+	margin: 0 2px;
+	background-color: #bbb;
+	border-radius: 50%;
+	display: inline-block;
+	transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+	background-color: #717171;
+}
+
+.fade{
+	-webkit-animation-name: fade;
+	-webkit-animation-duration: 1.5s;
+
+	animation-name: fade;
+	animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade{
+	from {opacity: .4}
+	to {opacity: 1}
+}
+
+@keyframes fade{
+	from {opacity: .4}
+	to {opacity: 1}
+}

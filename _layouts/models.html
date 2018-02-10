@@ -7,7 +7,7 @@ layout: wrapper
 {% for post in site.posts %}
 	{% if post.type contains "model" and post.folder contains page.featured %}
 		<div id="mw-featuredContainer">
-			<a href="">
+			<a href="{{site.baseurl}}{{post.url}}">
 				<div id="mw-featuredText">
 					<span>Featured Project:</span>
 				</div>
@@ -47,7 +47,7 @@ layout: wrapper
 		
 					<div class="mw-galleryItem">
 			
-						<a href="">
+						<a href="{{site.baseurl}}{{post.url}}">
 							
 							<img class="mw-itemPreview" src="{{site.baseurl}}/assets/images/models/{{post.folder}}/preview.png" onmouseover="this.src='{{post.preview}}'" onmouseout="this.src='{{site.baseurl}}/assets/images/models/{{post.folder}}/preview.png'">
 							

@@ -1,6 +1,7 @@
 ---
 layout: post
 type: model
+permalink: /:title
 title: RG Gundam Astray Red Frame
 scale: 1/144 
 date: 2017-07-04
