@@ -14,4 +14,4 @@ photos:
 - path: 3.jpg											
 ---
 
-It was a treat to be able to revisit one of my favorite gundam designs. The original 1/100 Astray Red Frame was one of the first model kits I'd ever built, albeit quite poorly, almost a decade ago, so I'm happy to have been able to give it a proper go this time. Weathered in black, he stands on a scratchbuilt balsa wood platform, which I carved up to look like jagged stone.
+Having built quite a number of Bandai Gundam model kits up to this point, I found myself genuinely surprised at the amount of care Bandai put into making their Star Wars ships as screen-accurate as possible. Vader's TIE, once detailed, looks spectacular on the shelf, and the Death-Star fragment that serves as its display base only helps. This won't be on the display base indefinitely, however; Rebel fighters are approaching and it may soon be time to engage...

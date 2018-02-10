@@ -17,4 +17,4 @@ photos:
 - path: 6.jpg											
 ---
 
-It was a treat to be able to revisit one of my favorite gundam designs. The original 1/100 Astray Red Frame was one of the first model kits I'd ever built, albeit quite poorly, almost a decade ago, so I'm happy to have been able to give it a proper go this time. Weathered in black, he stands on a scratchbuilt balsa wood platform, which I carved up to look like jagged stone.
+This model was bought and built with the intention of being a Christmas gift for a close friend, but ended up also giving me the gift of adventure with my first in-depth model car project. Spolied by the simple 'sandwich' style, precolored car models of my youth, this intricate love-labour of paint, cement, paint, gloss, and more paint, took the better part of a month to complete, with many setbacks and revisions along the way. The body was painted with Krylon and Testors rattlecan sprays, and the intricate details I brushpainted on by hand using Tamiya acrylics. All in all, a very fun project, and I'd love to attempt more model cars in the future with better equipment and conditions.

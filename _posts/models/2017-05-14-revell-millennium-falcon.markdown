@@ -2,7 +2,7 @@
 layout: post
 type: model
 permalink: /:title
-title: Revell ST Millenium Falcon
+title: Revell ST Millennium Falcon
 scale: NA
 date: 2017-05-14
 folder: falcon
@@ -16,4 +16,4 @@ photos:
 - path: 5.jpg										
 ---
 
-It was a treat to be able to revisit one of my favorite gundam designs. The original 1/100 Astray Red Frame was one of the first model kits I'd ever built, albeit quite poorly, almost a decade ago, so I'm happy to have been able to give it a proper go this time. Weathered in black, he stands on a scratchbuilt balsa wood platform, which I carved up to look like jagged stone.
+My first foray into sci-fi spaceship models from the world of sci-fi robot models, The Revell Snaptite Millennium Falcon was a quick and cheap model found at my local Michaels. While certain details aren't to my liking (the rectangular new-trilogy standard-issue dish instead of the circular aftermarket one Lando lost), there was enough surface detail on the kit itself for me to have a field day with with the panelling and the detailing over what was more or less blank white plastic that lacked the trademark "Star Wars" patina. It makes for a nice display piece on a stand that I threw together out of balsa and plywood, but I've got far bigger plans for the Millennium Falcon, so expect to see more Falcon models in the future!
