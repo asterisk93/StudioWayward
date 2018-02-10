@@ -21,4 +21,4 @@ photos:
 - path: 10.jpg												
 ---
 
-It was a treat to be able to revisit one of my favorite gundam designs. The original 1/100 Astray Red Frame was one of the first model kits I'd ever built, albeit quite poorly, almost a decade ago, so I'm happy to have been able to give it a proper go this time. Weathered in black, he stands on a scratchbuilt balsa wood platform, which I carved up to look like jagged stone.
+It was a treat to be able to revisit one of my favorite gundam designs. The original 1/100 Astray Red Frame was one of the first model kits I'd ever built (albeit quite poorly) almost a decade ago. I'm happy to have been able to give it a proper go this time. Weathered in black grime, he stands on a scratchbuilt balsa wood platform, which I carved up to look like jagged stone.

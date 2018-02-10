@@ -4,6 +4,8 @@
 	<a href="{{ site.baseurl }}/models">
 		<img id="header-banner" src="{{site.baseurl}}/assets/images/models/banner.png">
 	</a>
+
+	<img id="header-bannerRight" src="{{site.baseurl}}/assets/images/models/banner-right.png">
 </div>
 
 
@@ -19,11 +21,20 @@
 		padding-left: 15px;
 		text-align: left;
 		background-color: white;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: space-between;
 	}
 
 	#header-banner{
 		height: 80px;
 	}
+
+	#header-bannerRight{
+		height: 80px;
+	}
+
 </style>
 
 {% elsif page.header contains "photography" or page.type contains "photography" %}

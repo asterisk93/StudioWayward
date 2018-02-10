@@ -20,4 +20,4 @@ photos:
 - path: 9.jpg												
 ---
 
-A classic mobile suit from a prominent show in my childhood, done with a custom blue ink-fade on the wings so as to mimic the look of airbrush gradients.
+A classic mobile suit from a prominent show in my childhood, done with a custom blue ink-fade on the wings so as to mimic the look of airbrush gradients. 
