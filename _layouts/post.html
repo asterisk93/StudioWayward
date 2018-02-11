@@ -119,7 +119,20 @@ layout: wrapper
 </div>
 
 
-{% elsif post.type contains "photo" %}
+{% elsif page.type contains "photography" %}
 
+	{% if page.type contains "photoset" %}
+
+		<div>
+			
+		</div>
+
+	{% elsif page.type contains "picture" %}
+
+		<div>
+			
+		</div>
+
+	{% endif %}
 
 {% endif %}

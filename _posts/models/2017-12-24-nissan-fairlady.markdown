@@ -14,7 +14,11 @@ photos:
 - path: 3.jpg
 - path: 4.jpg
 - path: 5.jpg
-- path: 6.jpg											
+- path: 6.jpg
+- path: 7.jpg	
+- path: 8.jpg
+- path: 9.jpg
+- path: 10.jpg										
 ---
 
 This model was bought and built with the intention of being a Christmas gift for a close friend, but ended up also giving me the gift of adventure with my first in-depth model car project. Spolied by the simple 'sandwich' style, precolored car models of my youth, this intricate love-labour of paint, cement, paint, gloss, and more paint, took the better part of a month to complete, with many setbacks and revisions along the way. The body was painted with Krylon and Testors rattlecan sprays, and the more intricate details I brushpainted on by hand using Tamiya acrylics. All in all, a very fun project, and I'd love to attempt more model cars in the future with better equipment and conditions.
