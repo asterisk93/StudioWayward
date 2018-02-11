@@ -10,15 +10,7 @@ animate: https://i.imgur.com/ciAt8Hs.gif
 preview: https://i.imgur.com/A13ivFI.gif
 photos:
 - path: 1.jpg
-- path: 2.jpg
-- path: 3.jpg
-- path: 4.jpg
-- path: 5.jpg
-- path: 6.jpg
-- path: 7.jpg
-- path: 8.jpg
-- path: 9.jpg
-- path: 10.jpg												
+- path: 2.jpg											
 ---
 
 This 1/144 scale X-Wing Fighter came as a perk/addition in a special-edition release of the Bandai 1/72 Scale Red Squadron X-Wing that I'd mistaken for the Skywalker X-Wing. A small, fragile thing once the pieces are snapped together, I added Red-5 style decals, dirtied up the pale plastic with some grime, and mounted it on the dashboard of my car. She flies down the highway fine enough, but the usually abundant traffic makes it impossible to make the jump to lightspeed...
