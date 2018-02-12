@@ -1,0 +1,11 @@
+---
+layout: post
+type: photography, picture
+permalink: /photography/:title
+title: newyork-9
+date: 2013-08-06
+keyword: newyork
+path: 9.jpg
+---
+
+

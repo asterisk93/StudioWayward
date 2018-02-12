@@ -1,0 +1,11 @@
+---
+layout: post
+type: photography, picture
+permalink: /photography/:title
+title: village-3
+date: 2014-04-06
+keyword: village
+path: 3.jpg
+---
+
+

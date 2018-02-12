@@ -1,0 +1,11 @@
+---
+layout: post
+type: photography, picture
+permalink: /photography/:title
+title: robin-3
+date: 2014-05-12
+keyword: robin
+path: 3.jpg
+---
+
+

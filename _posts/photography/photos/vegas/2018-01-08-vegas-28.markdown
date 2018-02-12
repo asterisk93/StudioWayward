@@ -1,0 +1,11 @@
+---
+layout: post
+type: photography, picture
+permalink: /photography/:title
+title: vegas-28
+date: 2018-01-08
+keyword: vegas
+path: 28.jpg
+---
+
+

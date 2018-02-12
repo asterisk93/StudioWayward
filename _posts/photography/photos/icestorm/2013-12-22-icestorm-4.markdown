@@ -1,0 +1,11 @@
+---
+layout: post
+type: photography, picture
+permalink: /photography/:title
+title: icestorm-4
+date: 2013-12-22
+keyword: icestorm
+path: 4.jpg
+---
+
+

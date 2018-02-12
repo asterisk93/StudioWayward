@@ -1,0 +1,11 @@
+---
+layout: post
+type: photography, picture
+permalink: /photography/:title
+title: vegas-5
+date: 2018-01-08
+keyword: vegas
+path: 5.jpg
+---
+
+

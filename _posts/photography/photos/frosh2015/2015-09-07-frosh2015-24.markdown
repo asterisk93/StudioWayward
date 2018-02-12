@@ -1,0 +1,11 @@
+---
+layout: post
+type: photography, picture
+permalink: /photography/:title
+title: frosh2015-24
+date: 2015-09-07
+keyword: frosh2015
+path: 24.jpg
+---
+
+
