@@ -431,3 +431,60 @@ a .mw-itemTitle{
 	from {opacity: .4}
 	to {opacity: 1}
 }
+
+
+/**
+---------------------------------Photography Home---------------------------------
+**/
+
+#swp-recentContainer{
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+#swp-recentText{
+	text-align: left;
+	margin-top: 30px;
+	margin-left: 15%;
+	margin-bottom: 20px;
+	font-family: steagisler;
+	font-size: 1.5vw;
+	color: #ffab18;
+	text-transform: uppercase;
+}
+
+#swp-recentText span{
+	background-color: black;
+	padding: 10px;
+}
+
+#swp-recentGallery{
+	box-sizing: border-box;
+	width: 75%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	margin: 0 auto;
+	justify-content: center;
+}
+
+.swp-recentItem{
+	width: 24%;
+	padding-top: 100%;
+	border-style: solid;
+	border-width: 2px;
+	border-color: black;
+}
+
+.swp-recentItem:hover{
+	border-color: #ffab18;
+}
+
+
+.swp-recentThumb{
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+}
+

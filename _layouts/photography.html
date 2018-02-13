@@ -5,12 +5,12 @@ layout: wrapper
 <div id="swp-recentContainer">
 	
 	<div id="swp-recentText">
-		<span>Recent Exposures</span>
+		<span>Recent Exposures &#10097;&#10097;</span>
 	</div>
 
 	<div id="swp-recentGallery">
 		
-		{% for post in site.posts limit:9 %}
+		{% for post in site.posts limit:22 %}
 			{% if post.type contains "picture" %}
 
 				<div class="swp-recentItem">
