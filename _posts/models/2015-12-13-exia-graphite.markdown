@@ -1,7 +1,7 @@
 ---
 layout: post
 type: model
-permalink: /:title
+permalink: /models/:title
 title: NG Exia (Graphite Worn)
 scale: 1/100 
 date: 2015-12-13

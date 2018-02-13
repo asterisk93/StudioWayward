@@ -18,7 +18,7 @@ for imgNum in range(1, picQuantity + 1):
     filename = baseDate + '-' + keyword + '-' + str(imgNum) + '.markdown'
 
     #create frontmatter
-    front = '---\n' + 'layout: post\n' + 'type: photography, picture\n' + 'permalink: /photography/:title\n' + 'title: ' + keyword + '-' + str(imgNum) + '\n' + 'date: ' + baseDate + '\n' + 'keyword: ' + keyword + '\n' + 'path: ' + str(imgNum) + '.jpg\n' + '---'
+    front = '---\n' + 'layout: post\n' + 'type: photography, picture\n' + 'permalink: /photography/:title\n' + 'title: ' + keyword + '-' + str(imgNum) + '\n' + 'date: ' + baseDate + '\n' + 'keyword: ' + keyword + '\n' + 'imgpath: ' + str(imgNum) + '.jpg\n' + '---'
 
     #write to file
     fp = open((filename), 'x')

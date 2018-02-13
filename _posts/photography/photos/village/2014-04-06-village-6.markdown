@@ -5,7 +5,7 @@ permalink: /photography/:title
 title: village-6
 date: 2014-04-06
 keyword: village
-path: 6.jpg
+imgpath: 6.jpg
 ---
 
 

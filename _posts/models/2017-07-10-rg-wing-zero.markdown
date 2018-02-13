@@ -1,7 +1,7 @@
 ---
 layout: post
 type: model
-permalink: /:title
+permalink: /models/:title
 title: RG Wing Gundam Zero EW
 scale: 1/144 
 date: 2017-07-10

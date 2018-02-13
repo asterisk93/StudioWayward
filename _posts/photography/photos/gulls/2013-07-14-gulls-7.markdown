@@ -5,7 +5,7 @@ permalink: /photography/:title
 title: gulls-7
 date: 2013-07-14
 keyword: gulls
-path: 7.jpg
+imgpath: 7.jpg
 ---
 
 

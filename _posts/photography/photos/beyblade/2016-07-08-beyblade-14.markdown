@@ -5,7 +5,7 @@ permalink: /photography/:title
 title: beyblade-14
 date: 2016-07-08
 keyword: beyblade
-path: 14.jpg
+imgpath: 14.jpg
 ---
 
 

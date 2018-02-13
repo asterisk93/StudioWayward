@@ -2,8 +2,28 @@
 layout: wrapper
 ---
 
-<div id="photoPageBG">
+<div id="swp-recentContainer">
 	
-	<h1>P L A C E H O L D E R   T E X T</h1>
+	<div id="swp-recentText">
+		<span>Recent Exposures</span>
+	</div>
+
+	<div id="swp-recentGallery">
+		
+		{% for post in site.posts limit:9 %}
+			{% if post.type contains "picture" %}
+
+				<div class="swp-recentItem">
+				
+					<a href="">
+					
+						<img class="swp-recentThumb" src="{{site.baseurl}}/assets/images/photography/{{post.keyword}}/{{post.imgpath}}">
+
+					</a>
+
+				</div>
+			{% endif %}
+		{% endfor %}
+	</div>
 
 </div>

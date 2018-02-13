@@ -5,7 +5,7 @@ permalink: /photography/:title
 title: vegas-54
 date: 2018-01-08
 keyword: vegas
-path: 54.jpg
+imgpath: 54.jpg
 ---
 
 

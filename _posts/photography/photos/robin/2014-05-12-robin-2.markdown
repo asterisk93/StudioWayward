@@ -5,7 +5,7 @@ permalink: /photography/:title
 title: robin-2
 date: 2014-05-12
 keyword: robin
-path: 2.jpg
+imgpath: 2.jpg
 ---
 
 

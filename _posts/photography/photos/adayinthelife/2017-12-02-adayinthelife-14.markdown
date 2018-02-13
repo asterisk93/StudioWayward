@@ -5,7 +5,7 @@ permalink: /photography/:title
 title: adayinthelife-14
 date: 2017-12-02
 keyword: adayinthelife
-path: 14.jpg
+imgpath: 14.jpg
 ---
 
 Track 7b: Planet

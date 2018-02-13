@@ -1,7 +1,7 @@
 ---
 layout: post
 type: model
-permalink: /:title
+permalink: /models/:title
 title: Revell ST Millennium Falcon
 scale: NA
 date: 2017-05-14

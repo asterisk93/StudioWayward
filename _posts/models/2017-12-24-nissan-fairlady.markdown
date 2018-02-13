@@ -1,7 +1,7 @@
 ---
 layout: post
 type: model
-permalink: /:title
+permalink: /models/:title
 title: Nissan Fairlady 300ZX Turbo
 scale: 1/24
 date: 2017-12-24

@@ -5,7 +5,7 @@ permalink: /photography/:title
 title: julytalk-41
 date: 2014-01-16
 keyword: julytalk
-path: 41.jpg
+imgpath: 41.jpg
 ---
 
 

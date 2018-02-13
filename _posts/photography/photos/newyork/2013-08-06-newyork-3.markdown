@@ -5,7 +5,7 @@ permalink: /photography/:title
 title: newyork-3
 date: 2013-08-06
 keyword: newyork
-path: 3.jpg
+imgpath: 3.jpg
 ---
 
 

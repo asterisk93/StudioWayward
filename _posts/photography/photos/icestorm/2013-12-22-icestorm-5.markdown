@@ -5,7 +5,7 @@ permalink: /photography/:title
 title: icestorm-5
 date: 2013-12-22
 keyword: icestorm
-path: 5.jpg
+imgpath: 5.jpg
 ---
 
 

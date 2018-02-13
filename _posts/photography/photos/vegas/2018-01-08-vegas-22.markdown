@@ -5,7 +5,7 @@ permalink: /photography/:title
 title: vegas-22
 date: 2018-01-08
 keyword: vegas
-path: 22.jpg
+imgpath: 22.jpg
 ---
 
 

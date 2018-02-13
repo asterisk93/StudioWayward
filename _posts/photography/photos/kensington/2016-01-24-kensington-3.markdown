@@ -5,7 +5,7 @@ permalink: /photography/:title
 title: kensington-3
 date: 2016-01-24
 keyword: kensington
-path: 3.jpg
+imgpath: 3.jpg
 ---
 
 

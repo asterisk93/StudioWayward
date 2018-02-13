@@ -1,7 +1,7 @@
 ---
 layout: post
 type: model
-permalink: /:title
+permalink: /models/:title
 title: Vader's TIE Advanced Fighter
 scale: 1/72
 date: 2017-06-05

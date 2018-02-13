@@ -5,7 +5,7 @@ permalink: /photography/:title
 title: adayinthelife-17
 date: 2018-01-06
 keyword: adayinthelife
-path: 17.jpg
+imgpath: 17.jpg
 ---
 
 Track 9a: Break On Through (To The Other Side)

@@ -5,7 +5,7 @@ permalink: /photography/:title
 title: frosh2015-13
 date: 2015-09-07
 keyword: frosh2015
-path: 13.jpg
+imgpath: 13.jpg
 ---
 
 

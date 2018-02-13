@@ -5,7 +5,7 @@ permalink: /photography/:title
 title: adayinthelife-16
 date: 2018-01-02
 keyword: adayinthelife
-path: 16.jpg
+imgpath: 16.jpg
 ---
 
 Track 8b: Go Your Own Way
