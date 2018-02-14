@@ -208,7 +208,7 @@ a #mw-featScale{
 
 #mw-featBlurb{
 	font-family: helvetica;
-	font-size: 0.8vw;
+	font-size: 1.0vw;
 }
 
 a #mw-featBlurb{
@@ -322,7 +322,7 @@ a .mw-itemTitle{
 
 #mw-postGallery{
 	box-sizing: border-box;
-	max-width: 60%;
+	max-width: 70%;
 	position: relative;
 	margin: auto;
 	margin-top: 30px;
@@ -335,6 +335,7 @@ a .mw-itemTitle{
 	box-sizing: border-box;
 	text-align: center;
 	display: none;
+	width: 100%;
 }
 
 .mw-slideNum{
@@ -395,7 +396,9 @@ a .mw-itemTitle{
 .mw-slideIMG{
 	text-align: center;
 	margin: 0 auto;
-	height: 610px;
+	height: 35vw;
+	max-height: 35vw;
+	max-width: 80vw;
 }
 
 .dot{
