@@ -1,7 +1,8 @@
 ---
 layout: wrapper
 ---
-
+{% assign photos = site.posts | where:"type","photography, picture" %}
+{% assign sets = site.posts | where:"type","photography, photoset" %}
 <div id="swp-recentContainer">
 	
 	<div id="swp-recentText">
@@ -10,20 +11,59 @@ layout: wrapper
 
 	<div id="swp-recentGallery">
 		
-		{% for post in site.posts limit:22 %}
-			{% if post.type contains "picture" %}
+		{% for post in photos limit:20 %}
 
 				<div class="swp-recentItem">
-				
-					<a href="">
 					
-						<img class="swp-recentThumb" src="{{ site.baseurl }}/assets/images/photography/{{ post.keyword }}/{{ post.imgpath }}">
-
-					</a>
+					<img class="swp-recentThumb" src="{{ site.baseurl }}/assets/images/photography/{{ post.keyword }}/{{ post.imgpath }}" onclick="openModal();currentSlide({{ forloop.index }})">
 
 				</div>
-			{% endif %}
+
 		{% endfor %}
 	</div>
 
 </div>
+
+<div id="photo-modalContainer" class="modal">
+  
+
+  <div class="photo-modalContent">
+
+  	<span class="photo-modalExit" onclick="closeModal()">&times;</span>
+
+  	{% for post in photos limit:20 %}
+
+			<div class="photo-modalSlide">
+									
+				<img class="photo-modalIMG" src="{{ site.baseurl }}/assets/images/photography/{{ post.keyword }}/{{ post.imgpath }}">
+
+				<div class="photo-modalInfo">
+      				<div class="photo-modalCaption">
+      					<span>{{ post.content }}</span>
+      				</div>
+
+      				<div class="photo-modalSet">
+      					<span>From Photoset: </span> <br>
+
+      					{% for set in sets %}
+      					{% if post.keyword contains set.keyword %}
+      					<a href="{{ site.baseurl }}{{ set.url }}">
+      						<span>{{ set.title }}</span>
+      					</a>
+      					{% endif %}
+      					{% endfor %}
+      				</div>
+
+    			</div>
+
+			</div>
+
+	{% endfor %}
+
+    <a class="photo-modalPrev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="photo-ModalNext" onclick="plusSlides(1)">&#10095;</a>
+
+  </div>
+</div>
+
+{% include modal-photo-gallery.html %}

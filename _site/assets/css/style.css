@@ -490,3 +490,119 @@ a .mw-itemTitle{
 	object-fit: cover;
 }
 
+/**
+---------------------------------Modal (not model!) Photo Gallery---------------------------------
+**/
+
+#photo-modalContainer{
+	display: none;
+	position: fixed;
+	z-index: 1;
+	padding-top: 100px;
+  	left: 0;
+  	top: 0;
+  	width: 100%;
+  	height: 100%;
+  	overflow: auto;
+  	background-color: rgba(10,10,10,0.8);
+}
+
+.photo-modalContent{
+	position: relative;
+  	background-color: #fefefe;
+  	margin: auto;
+  	padding: 0;
+  	width: 70%;
+}
+
+.photo-modalSlide{
+	display: none;
+	text-align: center;
+	background-color: black;
+}
+
+.photo-modalIMG{
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 20px;
+	height: 33vw;
+	max-height: 33vw;
+	max-width: 80vw;
+}
+
+.photo-modalInfo{
+	display: flex;
+	height: 3vw;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	background-color: black;
+	text-align: center;
+	text-transform: uppercase;
+	padding: 15px;
+}
+
+.photo-modalCaption{
+	font-size: 15px;
+	font-family: helvetica;
+	background-color: #1a1a1a;
+	border-radius: 5px;
+	color: white;
+	font-weight: bold;
+	margin-left: 15px;
+	width: 70%;
+}
+
+.photo-modalSet{
+	font-size: 12px;
+	font-family: helvetica;
+	background-color: #1a1a1a;
+	border-radius: 5px;
+	color: white;
+	font-weight: bold;
+	padding: 5px;
+	margin-left: 15px;
+	width: 20%;
+	margin-right: 15px;
+}
+
+.photo-modalSet a{
+	color: #ffab18;
+}
+
+.photo-modalPrev,
+.photo-ModalNext {
+  	cursor: pointer;
+  	position: absolute;
+  	top: 50%;
+  	width: auto;
+  	padding: 16px;
+  	margin-top: -50px;
+  	color: white;
+  	font-weight: bold;
+  	font-size: 20px;
+}
+
+.photo-ModalNext {
+  	right: 0;
+}
+
+.photo-modalPrev:hover,
+.photo-ModalNext:hover {
+	color: #ffab18;
+}
+
+.photo-modalExit{
+	color: white;
+  	position: absolute;
+  	top: 10px;
+  	right: 25px;
+  	font-size: 35px;
+  	font-weight: bold;
+  	cursor: pointer;
+}
+
+.photo-modalExit:hover{
+	color: #ffab18;
+}
