@@ -38,9 +38,41 @@
 </style>
 
 {% elsif page.header contains "photography" or page.type contains "photography" %}
+{% assign sets = site.posts | where:"type","photography, photoset" %}
 
 <div id="header-bar">
-	<img id="header-banner" src="{{site.baseurl}}/assets/images/photography/banner.png">
+		
+
+	<a href="{{ site.baseurl }}/photography" id="header-banner">
+		<img id="header-banner" src="{{site.baseurl}}/assets/images/photography/banner.png">
+	</a>	
+
+
+	<div id="photo-navBar">
+
+	
+		<div class="photo-nav">
+			<a href="">
+				<span>&#10096; Contact &#10097;</span>
+			</a>
+		</div>
+
+		<div class="photo-nav">
+			<a href="">
+				<span>&#10096; Gallery &#10097;</span>
+			</a>
+		</div>
+
+		<div class="photo-nav" id="photoDD">
+			<span>&#10096; Recurring Themes &#10097;</span>
+
+			<div id="photoDDsets">
+				{% for set in sets %}
+				<a href="{{ site.baseurl }}{{ set.url }}">{{ set.title }}</a>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
 </div>
 
 
@@ -55,10 +87,14 @@
 		padding-left: 5px;
 		text-align: left;
 		background-color: black;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
 	}
 
 	#header-banner{
 		height: 60px;
 	}
+
 </style>
 {% endif %}

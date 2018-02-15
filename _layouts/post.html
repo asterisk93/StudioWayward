@@ -123,9 +123,64 @@ layout: wrapper
 
 	{% if page.type contains "photoset" %}
 
-		<div>
-			
+	{% assign photos = site.posts | where:"keyword", page.keyword %}
+	{% assign photos = photos | where:"type", "photography, picture" %}
+
+		<div id="photoset-container">
+			<div id="swp-recentText">
+				<span>Recurring Theme &#10097;&#10097;</span>
+			</div>
+
+			<div id="photoset-title">
+				<span>{{ page.title }}</span>
+			</div>
+
+			<div id="swp-recentGallery">
+		
+				{% for post in photos %}
+
+					<div class="swp-recentItem">
+					
+						<img class="swp-recentThumb" src="{{ site.baseurl }}/assets/images/photography/{{ post.keyword }}/{{ post.imgpath }}" onclick="openModal();currentSlide({{ forloop.index }})">
+
+					</div>
+
+				{% endfor %}
+			</div>
+
+			<div id="photo-modalContainer" class="modal">
+  
+
+  				<div class="photo-modalContent">
+
+  					<span class="photo-modalExit" onclick="closeModal()">&times;</span>
+
+  					{% for post in photos %}
+
+						<div class="photo-modalSlide">
+									
+							<img class="photo-modalIMG" src="{{ site.baseurl }}/assets/images/photography/{{ post.keyword }}/{{ post.imgpath }}">
+
+							<div class="photo-modalInfo">
+      							<div class="photo-modalCaption">
+      								<span>{{ post.content }}</span>
+      							</div>
+    						</div>
+
+						</div>
+
+					{% endfor %}
+
+    				<a class="photo-modalPrev" onclick="plusSlides(-1)">&#10094;</a>
+    				<a class="photo-ModalNext" onclick="plusSlides(1)">&#10095;</a>
+
+  				</div>
+			</div>
 		</div>
+
+		{% include modal-photo-gallery.html %}
+
+
 
 	{% elsif page.type contains "picture" %}
 
