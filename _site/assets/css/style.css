@@ -554,6 +554,30 @@ a .mw-itemTitle{
 	object-fit: cover;
 }
 
+#swp-linkGallery{
+	text-align: center;
+	margin: 0 auto;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	font-family: steagisler;
+	font-size: 1.3vw;
+	text-transform: uppercase;
+}
+
+#swp-linkGallery span{
+	background-color: black;
+	padding: 10px;
+}
+
+#swp-linkGallery a{
+	color: white;
+}
+
+#swp-linkGallery:hover span{
+	color: #ffab18;
+	background-color: #333333;
+}
+
 /**
 ---------------------------------Modal (not model!) Photo Gallery---------------------------------
 **/

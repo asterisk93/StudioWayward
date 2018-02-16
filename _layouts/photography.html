@@ -1,6 +1,8 @@
 ---
 layout: wrapper
 ---
+
+
 {% assign photos = site.posts | where:"type","photography, picture" %}
 {% assign sets = site.posts | where:"type","photography, photoset" %}
 <div id="swp-recentContainer">
@@ -21,6 +23,8 @@ layout: wrapper
 
 		{% endfor %}
 	</div>
+
+
 
 </div>
 
@@ -64,6 +68,12 @@ layout: wrapper
     <a class="photo-ModalNext" onclick="plusSlides(1)">&#10095;</a>
 
   </div>
+</div>
+
+<div id="swp-linkGallery">
+	<a href="{{ site.baseurl }}/photo-gallery">
+		<span>&#10096; Load Full Gallery &#10097;</span>
+	</a>
 </div>
 
 {% include modal-photo-gallery.html %}
