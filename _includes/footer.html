@@ -1,0 +1,97 @@
+
+
+	<div id="footer-container">
+		
+		<div class="footer-btn">
+			<a href="{{ site.baseurl }}/">
+				<img id="footer-home" src="{{ site.baseurl }}/assets/images/general/SW-general-footer.png">
+			</a>
+		</div>
+
+		<div class="footer-btn main">
+			<a href="{{ site.baseurl }}/models">
+				<span>Model Works</span>
+			</a>
+		</div>
+
+		<div class="footer-btn main">
+			<a href="{{ site.baseurl }}/photography">
+				<span>Photography</span>
+			</a>
+		</div>
+
+		<div class="footer-btn main">
+			<a href="https://asterisk93.github.io/BiteSizeReviews/">
+				<span>BS Reviews</span>
+			</a>
+		</div>
+
+		<div class="footer-btn">
+			<a href="https://asterscadaver.wordpress.com/">
+				<span>Blog</span>
+			</a>
+		</div>
+
+		<div class="footer-btn">
+			<a href="https://www.redbubble.com/">
+				<span>Store</span>
+			</a>
+		</div>
+
+		<div class="footer-btn">
+			<a href="https://www.instagram.com/studio_wayward/">
+				<span>Instagram</span>
+			</a>
+		</div>
+
+		<div class="footer-btn">
+			<a href="{{ site.baseurl }}/contact">
+				<span>Contact</span>
+			</a>
+		</div>
+
+	</div>
+
+{% if page.header contains "models" or page.type contains "model" %}
+
+<style type="text/css">
+	#footer-container{
+		background-color: white;
+	}
+
+	.footer-btn a{
+		color: #4a4a4a;
+	}
+
+	.footer-btn span:hover{
+		color: red;
+		background-color: #DDDDDD;
+	}
+
+	.footer-btn:hover{
+		background-color: #DDDDDD;
+	}
+</style>
+
+{% elsif page.header contains "photography" or page.type contains "photography" %}
+
+<style type="text/css">
+	#footer-container{
+		background-color: black;
+	}
+
+	.footer-btn a{
+		color: white;
+	}
+
+	.footer-btn span:hover{
+		color: #ffab18;
+		background-color: #333333;
+	}
+
+	.footer-btn:hover{
+		background-color: #333333;
+	}
+</style>
+
+{% endif %}

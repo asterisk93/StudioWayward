@@ -2,17 +2,32 @@
 <html>
 <head>
 	<title>{{page.title}}</title>
-	<meta name="description" content="{{site.description}}">
+
+	{% if page.header contains "models" or page.type contains "model" %}
+		<meta name="description" content="{{ page.title }} - Scale Models, Gunpla, Dioramas @ Wayward Model Works">
+	{% elsif page.header contains "photography" or page.type contains "photography" %}
+		<meta name="description" content="A collection of moments, captured through a viewfinder.">
+	{% else %}
+		<meta name="description" content="A creative crossroads, an intersection of intrigue. Welcome to Studio Wayward.">
+	{% endif %}
 	{% include blog-head.html %}
 </head>
 
 <body>
+	<div id="content-flex">
+		<div id="content">
+			{% unless page.type contains "home" %}
+				{% include header.html %}
+			{% endunless %}
 
-	{% unless page.type contains "home" %}
-		{% include header.html %}
-	{% endunless %}
+			{{ content }}
+		</div>
 
-	{{ content }}
+		{% unless page.type contains "home" %}
+			<div id="footer">
+				{% include footer.html %}
+			</div>
+		{% endunless %}
 </body>
 
 </html>

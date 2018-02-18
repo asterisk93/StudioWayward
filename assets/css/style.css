@@ -1,6 +1,20 @@
 body{
 	background-color: #FFFFFF;
 	font-size: 10px;
+	height: 100%;
+}
+
+#content-flex{
+	display: flex;
+	flex-direction: column;
+}
+
+#content{
+	flex: 1 0 auto;
+}
+
+#footer{
+	flex-shrink: 0;
 }
 
 a {
@@ -709,4 +723,38 @@ a .mw-itemTitle{
 #photoset-title span{
 	background-color: black;
 	padding: 10px;
+}
+
+/**
+---------------------------------Site Footer---------------------------------
+**/
+
+#footer-container{
+	margin-top: 50px;
+  	text-align: center;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+	padding: 5px;
+}
+
+#footer-home{
+	height: 35px;
+}
+
+.footer-btn{
+	font-family: helvetica;
+	font-size: 14px;
+	height: 35px;
+	text-transform: uppercase;
+	line-height: 35px;
+}
+
+.footer-btn span{
+	padding: 5px;
+}
+
+.footer-btn .main{
+	font-family: steagisler;
 }
