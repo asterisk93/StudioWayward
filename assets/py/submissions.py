@@ -1,4 +1,4 @@
-from git import Repo,remote
+import shutil
 import os.path
 import tkinter as tk
 from tkinter import ttk
@@ -25,7 +25,6 @@ class SW_submit(tk.Tk):
 
         tk.Tk.iconbitmap(self, default="favicon.ico")
         tk.Tk.wm_title(self, "Studio Wayward Submission App")
-        #tk.Tk.geometry(self, newGeometry="800x500")
         container = tk.Frame(self)
         container.pack(side="top", fill="both", expand = True)
         container.grid_rowconfigure(0, weight=1)
@@ -60,15 +59,21 @@ class SW_submit(tk.Tk):
         text = cont.review_text.get("1.0",'end-1c')
         poster = cont.file
 
-        #create filename
+        #create filename and send image to appropriate assets subfolder
         filename = year + '-' + day + '-' + month + '-' + str.replace(str.replace(title, ' ', '-'), ':', '-') + '.markdown'
 
         if rating == "meal":
             front = '---\n layout: post\n title: "' + title + '"\n date:  ' + year + '-' + month + '-' + day + '\n categories: opinion\n image: "' + keyword + '.jpg"\n permalink: /:title\n---'
-
+            
+            img_path = bsr_local + '/assets/article-images/'
+            shutil.move(poster, img_path + keyword + '.jpg')
+            
         else:
             front = '---\n layout: post\n title: "' + title + '"\n date:  ' + year + '-' + month + '-' + day + '\n categories: review\n rating: "' + rating + '"\n light: "' + color + '"\n poster: "' + keyword + '.jpg"\n permalink: /:title\n---'
 
+            img_path = bsr_local + '/assets/posters/'
+            shutil.move(poster, img_path + keyword + '.jpg')
+            
         review_path = bsr_local + '/_posts/'
 
         write_path = os.path.join(review_path, filename)
