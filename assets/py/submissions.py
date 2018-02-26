@@ -32,7 +32,7 @@ class SW_submit(tk.Tk):
 
         self.frames = {}
 
-        for F in (SiteSelect, Model, Photo, Review):
+        for F in (SiteSelect, Model, Photo, Review, Success, Photoset, Photographs):
             frame = F(container, self)
             self.frames[F] = frame
             frame.grid(row=0, column=0, sticky="nsew")
@@ -59,7 +59,7 @@ class SW_submit(tk.Tk):
         text = cont.review_text.get("1.0",'end-1c')
         poster = cont.file
 
-        #create filename and send image to appropriate assets subfolder
+        #create filename, frontmatter and send image to appropriate assets subfolder
         filename = year + '-' + day + '-' + month + '-' + str.replace(str.replace(title, ' ', '-'), ':', '-') + '.markdown'
 
         if rating == "meal":
@@ -85,6 +85,45 @@ class SW_submit(tk.Tk):
 
         #tracking
         print(title + ' created')
+
+        self.show_frame(Success)
+
+    def set_gen(self, cont):
+
+        #get field values
+        title = cont.set_title.get()
+        year = cont.set_year.get()
+        month = cont.set_month.get()
+        day = cont.set_day.get()
+        keyword = cont.set_keyword.get()
+        text = cont.set_desc.get("1.0",'end-1c')
+
+        #create filename
+        filename = year + '-' + day + '-' + month + '-' + str.replace(str.replace(title, ' ', '-'), ':', '-') + '.markdown'
+
+        #frontmatter
+        front = '---\n layout: post\n type: photography, photoset\n permalink: /photography/:title\n title: ' + title + '\n date:  ' + year + '-' + month + '-' + day + '\n keyword: ' + keyword + '\n---'
+                
+        set_path = wayward_local + '/_posts/photography/sets/'
+
+        write_path = os.path.join(set_path, filename)
+        
+        #write to file
+        fp = open((write_path), 'x')
+        fp.write(str(front + '\n\n\n' + text))
+        fp.close()
+
+        #tracking
+        print(title + ' created')
+
+        set_folder = wayward_local + '/assets/images/photography/' + keyword +'/'
+        if not os.path.exists(set_folder):
+            os.makedirs(set_folder)
+
+        self.show_frame(Success)
+
+    def quit(self):
+        self.destroy()
 
 class SiteSelect(tk.Frame):
 
@@ -127,13 +166,91 @@ class Photo(tk.Frame):
         label = ttk.Label(self, text="Studio Wayward Photography: Add Content", font=LARGE_FONT)
         label.pack(pady=10,padx=10)
 
-        button = ttk.Button(self, text="Continue",
-                            command=lambda: controller.show_frame(SiteSelect))
-        button.pack() 
+        button = ttk.Button(self, text="New Photoset",
+                            command=lambda: controller.show_frame(Photoset))
+        button.pack(pady=5,padx=10)
+
+        button = ttk.Button(self, text="New Photographs",
+                            command=lambda: controller.show_frame(Photographs))
+        button.pack(pady=5,padx=10)
 
         button = ttk.Button(self, text="Back",
                             command=lambda: controller.show_frame(SiteSelect))
-        button.pack()  
+        button.pack()
+
+class Photoset(tk.Frame):
+
+    def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent)
+        label = ttk.Label(self, text="Studio Wayward Photography: New Photoset", font=LARGE_FONT)
+        label.pack(pady=10,padx=10)
+
+        label = ttk.Label(self, text="Title:", font=LABEL_FONT)
+        label.pack()
+        set_title = tk.Entry(self)
+        set_title.pack(pady=10,padx=10)
+        self.set_title = set_title
+
+        label = ttk.Label(self, text="Date:", font=LABEL_FONT)
+        label.pack()
+
+        set_year=tk.StringVar(self)
+        set_month=tk.StringVar(self)
+        set_day=tk.StringVar(self)
+        
+        year = ttk.OptionMenu(self, set_year, "Year", "2017", "2018", "2019", "2020", "2021")
+        set_year.set("Year")
+        year.pack()
+        self.set_year = set_year
+
+        month = ttk.OptionMenu(self, set_month, "Month", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12")
+        set_month.set("Month")
+        month.pack()
+        self.set_month = set_month
+        
+        day = ttk.OptionMenu(self, set_day, "Day", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31")
+        set_day.set("Day")
+        day.pack()
+        self.set_day = set_day
+
+        label = ttk.Label(self, text="Keyword:", font=LABEL_FONT)
+        label.pack()
+        set_keyword = tk.Entry(self)
+        set_keyword.pack(pady=10,padx=10)
+        self.set_keyword = set_keyword
+
+        label = ttk.Label(self, text="Description:", font=LABEL_FONT)
+        label.pack()
+        set_desc = tk.Text(self)
+        set_desc.pack(pady=10,padx=10)
+        self.set_desc = set_desc
+
+        button = ttk.Button(self, text="Create",
+                            command=lambda: controller.set_gen(self))
+        button.pack(pady=5,padx=10)
+
+        button = ttk.Button(self, text="Back",
+                            command=lambda: controller.show_frame(Photo))
+        button.pack()
+
+class Photographs(tk.Frame):
+
+    def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent)
+        label = ttk.Label(self, text="Studio Wayward Photography: Add Content", font=LARGE_FONT)
+        label.pack(pady=10,padx=10)
+
+        button = ttk.Button(self, text="New Photoset",
+                            command=lambda: controller.show_frame(Photoset))
+        button.pack(pady=5,padx=10)
+
+        button = ttk.Button(self, text="New Photographs",
+                            command=lambda: controller.show_frame(Photographs))
+        button.pack(pady=5,padx=10)
+
+        button = ttk.Button(self, text="Back",
+                            command=lambda: controller.show_frame(SiteSelect))
+        button.pack()
 
 class Review(tk.Frame):
 
@@ -206,11 +323,21 @@ class Review(tk.Frame):
                             command=lambda: controller.show_frame(SiteSelect))
         button.pack(pady=10,padx=10)
 
+class Success(tk.Frame):
+
+    def __init__(self, parent, controller):
+        tk.Frame.__init__(self, parent)
+        label = ttk.Label(self, text="Post Created!", font=LARGE_FONT)
+        label.pack(pady=10,padx=10)
+
+        button = ttk.Button(self, text="Continue",
+                            command=lambda: controller.show_frame(SiteSelect))
+        button.pack() 
+
+        button = ttk.Button(self, text="Finish",
+                            command=lambda: controller.quit())
+        button.pack()  
         
-
-##Post-Gen Functions##
-
-    
 
 app = SW_submit()
 app.mainloop()
