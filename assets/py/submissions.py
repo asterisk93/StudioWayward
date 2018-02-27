@@ -46,6 +46,9 @@ class SW_submit(tk.Tk):
     def request_file(self, cont):
         cont.file = filedialog.askopenfilename(initialdir = "/",title = "Select file",filetypes = (("jpeg files","*.jpg"),("all files","*.*")))
 
+    def request_dir(self, cont):
+        cont.file_dir = filedialog.askdirectory()
+    
     def review_gen(self, cont):
 
         #get field values
@@ -116,12 +119,51 @@ class SW_submit(tk.Tk):
         #tracking
         print(title + ' created')
 
-        set_folder = wayward_local + '/assets/images/photography/' + keyword +'/'
-        if not os.path.exists(set_folder):
-            os.makedirs(set_folder)
+        set_asset_folder = wayward_local + '/assets/images/photography/' + keyword +'/'
+        if not os.path.exists(set_asset_folder):
+            os.makedirs(set_asset_folder)
+
+        set_post_folder = wayward_local + '/_posts/photography/photos/' + keyword +'/'
+        if not os.path.exists(set_post_folder):
+            os.makedirs(set_post_folder)
 
         self.show_frame(Success)
 
+    def add_photos(self, cont):
+        
+        #get field values
+        photoset = cont.photoset
+        year = cont.photo_year.get()
+        month = cont.photo_month.get()
+        day = cont.photo_day.get()
+        keyword = cont.photo_keyword.get()
+        src_dir = cont.file_dir
+
+        #move and rename photo files, markdown generation
+        dest_asset_dir = wayward_local + '/assets/images/photography/' + keyword +'/'
+        dest_post_dir = wayward_local + '/_posts/photography/photos/' + keyword +'/'
+        offset = len(os.listdir(dest_asset_dir))
+        src_files = os.listdir(src_dir)
+        for photo in src_files:
+            offset += 1
+            shutil.move((src_dir + '/' + photo), dest_asset_dir + str(offset) + '.jpg')
+            
+
+            #filename and frontmatter
+            base_date = year + '-' + month + '-' + day
+            filename = base_date + '-' + keyword + '-' + str(offset) + '.markdown'
+            front = '---\n' + 'layout: post\n' + 'type: photography, picture\n' + 'permalink: /photography/:title\n' + 'title: ' + keyword + '-' + str(offset) + '\n' + 'date: ' + base_date + '\n' + 'keyword: ' + keyword + '\n' + 'imgpath: ' + str(offset) + '.jpg\n' + '---'
+
+            write_path = os.path.join(dest_post_dir, filename)
+            fp = open((write_path), 'x')
+            fp.write(str(front + '\n\n\n'))
+            fp.close()
+
+            #tracking
+            print(keyword + '-' + str(offset) + ' created')
+
+        self.show_frame(Success)
+         
     def quit(self):
         self.destroy()
 
@@ -237,17 +279,58 @@ class Photographs(tk.Frame):
 
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
-        label = ttk.Label(self, text="Studio Wayward Photography: Add Content", font=LARGE_FONT)
+        label = ttk.Label(self, text="Add Photographs to Existing Photoset", font=LARGE_FONT)
         label.pack(pady=10,padx=10)
 
-        button = ttk.Button(self, text="New Photoset",
-                            command=lambda: controller.show_frame(Photoset))
+        photosets = ['']
+        asset_dir = wayward_local +'/assets/images/photography/'
+        for pset in os.listdir(asset_dir):
+            if os.path.isdir(asset_dir + pset):
+                photosets.append(pset)
+
+        photoset = tk.StringVar(self)
+        
+        set_select = ttk.OptionMenu(self, photoset, *photosets)
+        photoset.set("Choose a Set")
+        set_select.pack()
+        self.photoset = photoset
+
+        label = ttk.Label(self, text="Photoset Keyword:", font=LABEL_FONT)
+        label.pack()
+        photo_keyword = tk.Entry(self)
+        photo_keyword.pack(pady=10,padx=10)
+        self.photo_keyword = photo_keyword
+
+        label = ttk.Label(self, text="Date:", font=LABEL_FONT)
+        label.pack()
+
+        photo_year=tk.StringVar(self)
+        photo_month=tk.StringVar(self)
+        photo_day=tk.StringVar(self)
+        
+        year = ttk.OptionMenu(self, photo_year, "Year", "2016", "2017", "2018", "2019", "2020", "2021")
+        photo_year.set("Year")
+        year.pack()
+        self.photo_year = photo_year
+
+        month = ttk.OptionMenu(self, photo_month, "Month", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12")
+        photo_month.set("Month")
+        month.pack()
+        self.photo_month = photo_month
+        
+        day = ttk.OptionMenu(self, photo_day, "Day", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31")
+        photo_day.set("Day")
+        day.pack()
+        self.photo_day = photo_day
+
+        button = ttk.Button(self, text="Select Source Folder",
+                            command=lambda: controller.request_dir(self))
         button.pack(pady=5,padx=10)
 
-        button = ttk.Button(self, text="New Photographs",
-                            command=lambda: controller.show_frame(Photographs))
-        button.pack(pady=5,padx=10)
-
+        button = ttk.Button(self, text="Submit",
+                            command=lambda: controller.add_photos(self))
+        button.pack()
+        
         button = ttk.Button(self, text="Back",
                             command=lambda: controller.show_frame(SiteSelect))
         button.pack()
