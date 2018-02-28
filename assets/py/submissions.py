@@ -63,17 +63,17 @@ class SW_submit(tk.Tk):
         poster = cont.file
 
         #create filename, frontmatter and send image to appropriate assets subfolder
-        filename = year + '-' + day + '-' + month + '-' + str.replace(str.replace(title, ' ', '-'), ':', '-') + '.markdown'
+        
 
         if rating == "meal":
             front = '---\n layout: post\n title: "' + title + '"\n date:  ' + year + '-' + month + '-' + day + '\n categories: opinion\n image: "' + keyword + '.jpg"\n permalink: /:title\n---'
-            
+            filename = year + '-' + day + '-' + month + '-MEAL-' + str.replace(str.replace(title, ' ', '-'), ':', '-') + '.markdown'
             img_path = bsr_local + '/assets/article-images/'
             shutil.move(poster, img_path + keyword + '.jpg')
             
         else:
             front = '---\n layout: post\n title: "' + title + '"\n date:  ' + year + '-' + month + '-' + day + '\n categories: review\n rating: "' + rating + '"\n light: "' + color + '"\n poster: "' + keyword + '.jpg"\n permalink: /:title\n---'
-
+            filename = year + '-' + day + '-' + month + '-' + str.replace(str.replace(title, ' ', '-'), ':', '-') + '.markdown'
             img_path = bsr_local + '/assets/posters/'
             shutil.move(poster, img_path + keyword + '.jpg')
             
@@ -129,6 +129,47 @@ class SW_submit(tk.Tk):
 
         self.show_frame(Success)
 
+    def model_gen(self, cont):
+
+        #field values
+        title = cont.model_title.get()
+        scale = cont.model_scale.get()
+        year = cont.model_year.get()
+        month = cont.model_month.get()
+        day = cont.model_day.get()
+        src_dir = cont.file_dir
+        img_preview = cont.file
+        animate = cont.model_animate.get()
+        preview = cont.model_pre.get()
+        keyword = cont.model_keyword.get()
+        text = cont.model_desc.get("1.0",'end-1c')
+
+        dest_asset_dir = wayward_local + '/assets/images/models/' + keyword + '/'
+        dest_post_dir = wayward_local + '/_posts/models/'
+
+        os.makedirs(dest_asset_dir)
+        
+        #filename and frontmatter, file migration
+        filename = year + '-' + day + '-' + month + '-' + str.replace(str.replace(title, ' ', '-'), ':', '-') + '.markdown'
+        front = '---\nlayout: post\ntype: model\npermalink: /models/:title\ntitle: ' + title + '\nscale: ' + scale +'\ndate:  ' + year + '-' + month + '-' + day + '\nfolder: ' + keyword +'\nanimate: ' + animate + '\npreview: ' + preview + '\nphotos:\n'
+
+        shutil.move(img_preview, (dest_asset_dir + 'preview.png'))
+
+        increment = 1
+        for photo in os.listdir(src_dir):
+            shutil.move((src_dir + '/' + photo), dest_asset_dir + str(increment) + '.jpg')
+            front = front + '- path: ' + str(increment) + '.jpg\n'
+            increment += 1
+        front = front + '---\n\n\n'
+
+        #write to file
+        write_path = os.path.join(dest_post_dir, filename)
+        fp = open((write_path), 'x')
+        fp.write(str(front + text))
+        fp.close()
+
+        self.show_frame(Success)
+        
     def add_photos(self, cont):
         
         #get field values
@@ -138,6 +179,7 @@ class SW_submit(tk.Tk):
         day = cont.photo_day.get()
         keyword = cont.photo_keyword.get()
         src_dir = cont.file_dir
+        desc = cont.model_desc.get()
 
         #move and rename photo files, markdown generation
         dest_asset_dir = wayward_local + '/assets/images/photography/' + keyword +'/'
@@ -186,6 +228,8 @@ class SiteSelect(tk.Frame):
                             command=lambda: controller.show_frame(Review))
         button.pack(pady=10, padx=10, side=tk.TOP)
 
+
+
 class Model(tk.Frame):
 
     def __init__(self, parent, controller):
@@ -193,13 +237,81 @@ class Model(tk.Frame):
         label = ttk.Label(self, text="Studio Wayward Model Works: New Model", font=LARGE_FONT)
         label.pack(pady=10,padx=10)
 
-        button = ttk.Button(self, text="Submit",
-                            command=lambda: controller.show_frame(SiteSelect))
-        button.pack() 
+        label = ttk.Label(self, text="Title:", font=LABEL_FONT)
+        label.pack()
+        model_title = tk.Entry(self)
+        model_title.pack(pady=10,padx=10)
+        self.model_title = model_title
+
+        label = ttk.Label(self, text="Model Scale:", font=LABEL_FONT)
+        label.pack()
+        model_scale = tk.Entry(self)
+        model_scale.pack(pady=10,padx=10)
+        self.model_scale = model_scale
+
+        label = ttk.Label(self, text="Date:", font=LABEL_FONT)
+        label.pack()
+
+        model_year=tk.StringVar(self)
+        model_month=tk.StringVar(self)
+        model_day=tk.StringVar(self)
+        
+        year = ttk.OptionMenu(self, model_year, "Year", "2017", "2018", "2019", "2020", "2021")
+        model_year.set("Year")
+        year.pack()
+        self.model_year = model_year
+
+        month = ttk.OptionMenu(self, model_month, "Month", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12")
+        model_month.set("Month")
+        month.pack()
+        self.model_month = model_month
+        
+        day = ttk.OptionMenu(self, model_day, "Day", "01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14", "15", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31")
+        model_day.set("Day")
+        day.pack()
+        self.model_day = model_day
+
+        button = ttk.Button(self, text="Select Image Source Folder",
+                            command=lambda: controller.request_dir(self))
+        button.pack(pady=5,padx=10)
+
+        preview = ttk.Button(self, text="Select Preview Thumbnail",
+                            command=lambda: controller.request_file(self))
+        preview.pack(pady=10,padx=10)
+
+        label = ttk.Label(self, text="Link to animate.gif", font=LABEL_FONT)
+        label.pack()
+        model_animate = tk.Entry(self)
+        model_animate.pack(pady=10,padx=10)
+        self.model_animate = model_animate
+
+        label = ttk.Label(self, text="Link to preview.gif", font=LABEL_FONT)
+        label.pack()
+        model_pre = tk.Entry(self)
+        model_pre.pack(pady=10,padx=10)
+        self.model_pre = model_pre
+
+        label = ttk.Label(self, text="Keyword:", font=LABEL_FONT)
+        label.pack()
+        model_keyword = tk.Entry(self)
+        model_keyword.pack(pady=10,padx=10)
+        self.model_keyword = model_keyword
+
+        label = ttk.Label(self, text="Description:", font=LABEL_FONT)
+        label.pack()
+        model_desc = tk.Text(self)
+        model_desc.pack(pady=10,padx=10)
+        self.model_desc = model_desc
+
+        button = ttk.Button(self, text="Create",
+                            command=lambda: controller.model_gen(self))
+        button.pack(pady=5,padx=10)
 
         button = ttk.Button(self, text="Back",
-                            command=lambda: controller.show_frame(SiteSelect))
-        button.pack()  
+                            command=lambda: controller.show_frame(Model))
+        button.pack()        
+
+        
 
 class Photo(tk.Frame):
 
@@ -332,7 +444,7 @@ class Photographs(tk.Frame):
         button.pack()
         
         button = ttk.Button(self, text="Back",
-                            command=lambda: controller.show_frame(SiteSelect))
+                            command=lambda: controller.show_frame(Photo))
         button.pack()
 
 class Review(tk.Frame):
@@ -411,6 +523,9 @@ class Success(tk.Frame):
     def __init__(self, parent, controller):
         tk.Frame.__init__(self, parent)
         label = ttk.Label(self, text="Post Created!", font=LARGE_FONT)
+        label.pack(pady=10,padx=10)
+
+        label = ttk.Label(self, text="Please restart app to see changes.", font=LABEL_FONT)
         label.pack(pady=10,padx=10)
 
         button = ttk.Button(self, text="Continue",
