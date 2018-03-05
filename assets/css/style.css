@@ -725,6 +725,17 @@ a .mw-itemTitle{
 	padding: 10px;
 }
 
+#photoset-desc{
+	width: 60%;
+	margin: auto;
+	font-size: 16px;
+	font-family: helvetica;
+	color: white;
+	margin-top: 15px;
+	margin-bottom: 15px;
+
+}
+
 /**
 ---------------------------------Site Footer---------------------------------
 **/
@@ -741,6 +752,7 @@ a .mw-itemTitle{
 
 #footer-home{
 	height: 35px;
+	padding: 0 10px;
 }
 
 .footer-btn{
@@ -749,9 +761,25 @@ a .mw-itemTitle{
 	height: 35px;
 	text-transform: uppercase;
 	line-height: 35px;
+	border-width: 0px;
+	border-radius: 5px;
 }
 
 .footer-btn span{
+	padding: 5px;
+}
+
+.footer-btn-main{
+	font-family: steagisler;
+	font-size: 16px;
+	height: 35px;
+	text-transform: uppercase;
+	line-height: 35px;
+	border-width: 0px;
+	border-radius: 5px;
+}
+
+.footer-btn-main span{
 	padding: 5px;
 }
 

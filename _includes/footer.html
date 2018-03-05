@@ -8,19 +8,19 @@
 			</a>
 		</div>
 
-		<div class="footer-btn main">
+		<div class="footer-btn-main">
 			<a href="{{ site.baseurl }}/models">
 				<span>Model Works</span>
 			</a>
 		</div>
 
-		<div class="footer-btn main">
+		<div class="footer-btn-main">
 			<a href="{{ site.baseurl }}/photography">
 				<span>Photography</span>
 			</a>
 		</div>
 
-		<div class="footer-btn main">
+		<div class="footer-btn-main">
 			<a href="https://asterisk93.github.io/BiteSizeReviews/">
 				<span>BS Reviews</span>
 			</a>
@@ -71,6 +71,19 @@
 	.footer-btn:hover{
 		background-color: #DDDDDD;
 	}
+
+	.footer-btn-main a{
+		color: #4a4a4a;
+	}
+
+	.footer-btn-main span:hover{
+		color: red;
+		background-color: #DDDDDD;
+	}
+
+	.footer-btn-main:hover{
+		background-color: #DDDDDD;
+	}
 </style>
 
 {% elsif page.header contains "photography" or page.type contains "photography" %}
@@ -90,6 +103,19 @@
 	}
 
 	.footer-btn:hover{
+		background-color: #333333;
+	}
+
+	.footer-btn-main a{
+		color: white;
+	}
+
+	.footer-btn-main span:hover{
+		color: #ffab18;
+		background-color: #333333;
+	}
+
+	.footer-btn-main:hover{
 		background-color: #333333;
 	}
 </style>
