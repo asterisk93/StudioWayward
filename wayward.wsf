@@ -1,0 +1,7 @@
+<job>
+<script language="VBScript">
+set WshShell = WScript.CreateObject("WScript.Shell")
+CMDFile = "\\assets\\py\\submissions.exe \\assets\\py\\submissions.py"
+WshShell.Run CMDFile, 1
+</script>
+</job> 
