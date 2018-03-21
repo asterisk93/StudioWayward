@@ -799,7 +799,7 @@ a .mw-itemTitle{
 
 #res-tagline{
 	font-family: steagisler;
-	font-size: 1.2vw;
+	font-size: 1.4vw;
 	margin-top: 80px;
 	margin-bottom: 80px;
 	text-transform: uppercase;
@@ -993,7 +993,7 @@ a .mw-itemTitle{
 
 .pj-caption{
 	font-family: helvetica;
-	font-size: 0.9vw;
+	font-size: 1.2vw;
 	width: 80%;
 	margin: 0 auto;
 	padding: 15px;
@@ -1004,7 +1004,7 @@ a .mw-itemTitle{
 
 .pj-blurb{
 	box-sizing: border-box;
-	font-size: 1.0vw;
+	font-size: 1.2vw;
 	font-family: helvetica;
 	padding: 30px;
 	background-color: #d8d9dc;
@@ -1173,7 +1173,7 @@ a .mw-itemTitle{
 
 .hist-blurb{
 	width: 80%;
-	font-size: 1.0vw;
+	font-size: 1.2vw;
 	font-family: helvetica;
 	margin: 0 auto;
 	padding: 30px;
