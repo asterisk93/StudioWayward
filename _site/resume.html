@@ -1,0 +1,984 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Kevin / Doodnauth</title>
+
+	
+		<meta name="description" content="Kevin Doodnauth: Tech & Design">
+	
+	<link rel="stylesheet" href="/assets/css/style.css">
+<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+</head>
+
+<body>
+	<div id="content-flex">
+		<div id="content">
+			
+
+			<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script>
+	$(document).ready(function(){
+		$("a").on('click', function(event) {
+			if (this.hash !== "") {
+				event.preventDefault();
+				var hash = this.hash;
+
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top
+				}, 800, function(){
+					window.location.hash = hash;
+				});
+			}
+		});
+	});
+</script>
+
+<div id="res-header">
+
+	<img id="res-logoIMG" src="/assets/images/resume/kd.png">
+
+	<div id="res-tagline">
+		<span>○ Software/Web Dev ○ Computer Tech ○ Graphic Artist ○ Photographer ○ Writer ○</span>
+	</div>
+
+	<div id="header-nav">
+
+		<div id="res-nav">
+			<a href="#res-projects">
+				<span>PROJECTS</span>
+			</a>
+		</div>
+
+		<div id="res-nav">
+			<a href="#res-history">
+				<span>WORK HISTORY</span>
+			</a>
+		</div>
+
+		<div id="res-nav">
+			<a href="#res-contact">
+				<span>CONTACT</span>
+			</a>
+		</div>
+
+	</div>
+</div>
+
+<div id="res-projects">
+	
+	<img class="section-IMG" src="/assets/images/resume/projects.png">
+
+	<div class="section-tagline">
+		<span>Click a Project Below for more details.</span>
+	</div>
+
+	<div id="pj-models">
+		
+		<div class="pj-titlebar" onclick="showProject('pj-model-hide', 'pj-modelSlide')">
+
+			<img class="pj-logo" src="/assets/images/models/banner.png">
+
+			<div class="pj-title">
+				<span>"SW Model Works" Scale Model Showcase website</span>
+			</div>
+
+		</div>
+
+		<div id="pj-model-hide" class="res-pj">
+
+			<div class="pj-blurb">
+				<span>Studio Wayward Model Works is a website I built to showcase finished pieces from my scale modelling hobby, using Jekyll's blog framework. "Posts", or in this case, individual models, have their raw data stored in markdown files, which are then used in conjunction with my html templates to generate the model pages. The site is styled entirely from scratch using vanilla CSS, which I've linked in such a way so as to exclude any and all Jekyll theme defaults.</span>
+			</div>
+
+			<div class="pj-gallery">
+
+				<div class="pj-slidecont">
+
+					<a class="pj-prev" onclick="slideNav(-1, 'pj-modelSlide')">&#10094;</a>
+
+					<div class="pj-modelSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>1/4</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/model/1.png">
+
+						<div class="pj-caption">
+							<span>This is the Wayward Model Works homepage. The section on the left contains the 'featured' model preview (set by a flag in the source markdown), which displays a rotating animated gif of the model, along with the model scale and description. The section on the right lists all the remaining, non-featured models, along with thumbnail previews that play as animated gifs on mouseover. </span>
+						</div>
+
+					</div>
+
+					<div class="pj-modelSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>2/4</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/model/2.png">
+
+						<div class="pj-caption">
+							<span>The dedicated page for each model features an image gallery containing a higher resolution gif of the model on a 360 degree turntable, as well as other photos of the model. A 'dot' bar is included for ease of gallery navigation.</span>
+						</div>
+
+					</div>
+
+					<div class="pj-modelSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>3/4</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/model/3.png">
+
+						<div class="pj-caption">
+							<span>The model's scale (if applicable) and description are displayed underneath the gallery.</span>
+						</div>
+
+					</div>
+
+					<div class="pj-modelSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>4/4</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/model/4.png">
+
+						<div class="pj-caption">
+							<span>Each individual model is stored as a single markdown file, using yaml frontmatter that contains links to the high and low resolution animated gifs (hosted externally to save space), the 'assets' subfolder containing the gallery images, as well as paths for each of those images. </span>
+						</div>
+
+					</div>
+
+					<a class="pj-next" onclick="slideNav(+1, 'pj-modelSlide')">&#10095;</a>
+
+				</div>
+			</div>
+
+			<div class="pj-external">
+				<a href="http://studiowayward.com/models">Visit Website</a>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div id="pj-photog">
+
+		<div class="pj-titlebar" onclick="showProject('pj-photo-hide', 'pj-photoSlide')">
+
+			<img class="pj-logo" src="/assets/images/resume/photo-banner.png">
+
+			<div class="pj-title">
+				<span>"Wayward Photography" Photo Portfolio website</span>
+			</div>
+
+		</div>
+
+		<div id="pj-photo-hide" class="res-pj">
+
+			<div class="pj-blurb">
+				<span>Wayward Photography is another site made under the 'Studio Wayward' banner to serve as a portfolio/gallery site for my photography hobby. Like Model Works, it's a jekyll based blogsite styled from scratch, but with a different markdown file structure that allows for individual photos to be managed independent of their bespoke photosets. I opted for a color scheme with dark greys and blacks, accented with a very rich yellow, so as to better fit the urban aesthetic of my photography.</span>
+			</div>
+
+			<div class="pj-gallery">
+
+				<div class="pj-slidecont">
+
+					<a class="pj-prev" onclick="slideNav(-1, 'pj-photoSlide')">&#10094;</a>
+
+					<div class="pj-photoSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>1/5</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/photo/1.png">
+
+						<div class="pj-caption">
+							<span>This is the Wayward Photography homepage, containing a 5x4 grid of the 20 most recently uploaded photos regardless of associated photoset. A link to continue loading the full photo feed in reverse chronological order is located under the grid.</span>
+						</div>
+
+					</div>
+
+					<div class="pj-photoSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>2/5</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/photo/2.png">
+
+						<div class="pj-caption">
+							<span>Clicking one of the photo thumbnails causes the image to pop up in a modal gallery. If triggered from the homepage, a link to the photoset ("recurring theme") is shown underneath the image, alongside its caption, if applicable. Left and right arrows allow for navigation through all the photos with thumbnails displayed on the page.</span>
+						</div>
+
+					</div>
+
+					<div class="pj-photoSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>3/5</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/photo/3.png">
+
+						<div class="pj-caption">
+							<span>The navigation bar at the top of the page contains a link to load the full gallery in reverse-chronological order, and a drop-down menu listing all of the photosets, also in reverse-chronological order.</span>
+						</div>
+
+					</div>
+
+					<div class="pj-photoSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>4/5</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/photo/4.png">
+
+						<div class="pj-caption">
+							<span>Each photoset page displays the 4 x n photogrid with the photos from that set, underneath the set's title and a short description/preamble.</span>
+						</div>
+
+					</div>
+
+					<div class="pj-photoSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>5/5</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/photo/5.png">
+
+						<div class="pj-caption">
+							<span>Unlike the 1:1 page-to-markdown structure that was used for the Model Works site, Wayward Photography needed a way to treat both the photoset and its individual photo as objects that could be managed with Jekyll. To achieve this, each photoset and each individual photo has its own dedicated markdown file.</span>
+						</div>
+
+					</div>
+
+					<a class="pj-next" onclick="slideNav(+1, 'pj-photoSlide')">&#10095;</a>
+
+				</div>
+			</div>
+
+			<div class="pj-external">
+				<a href="http://studiowayward.com/photography">Visit Website</a>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div id="pj-bsr">
+
+		<div class="pj-titlebar" onclick="showProject('pj-bsr-hide', 'pj-bsrSlide')">
+
+			<img class="pj-logo" src="/assets/images/resume/bsr-logo2.png">
+
+			<div class="pj-title">
+				<span>"Bite-Size Reviews" Movie Review blogsite</span>
+			</div>
+
+		</div>
+
+		<div id="pj-bsr-hide" class="res-pj">
+
+			<div class="pj-blurb">
+				<span>Bite-Size Reviews is my first attempt at making a Jekyll-based blog site styled entirely from scratch with vanilla CSS. It was finished about a month or so before <a href="http://studiowayward.com/">Studio Wayward</a>, but came to fall under the Wayward banner all the same. Up to this point I had been reviewing movies on facebook for a number of years, and when faced with the fact that I had garnered a slight following, I decided to create a place online where I could formally collect all of my reviews for ease of retroactive reading and access going forward.</span>
+			</div>
+
+			<div class="pj-gallery">
+
+				<div class="pj-slidecont">
+
+					<a class="pj-prev" onclick="slideNav(-1, 'pj-bsrSlide')">&#10094;</a>
+
+					<div class="pj-bsrSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>1/6</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/bsr/1.png">
+
+						<div class="pj-caption">
+							<span>The Bite-Size Reviews homepage features the BSR logo prominently over a looping gif of countdown film reel that I recorded at a friend's house (not stock footage). Also prominent are the two large buttons leading to the reviews (left) and the articles (right).</span>
+						</div>
+
+					</div>
+
+					<div class="pj-bsrSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>2/6</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/bsr/2.png">
+
+						<div class="pj-caption">
+							<span>Below the post category buttons are the post previews of the x most recent reviews/articles in reverse-chronological order. The amount previewed on the homepage changes depending on however many posts I add within a given update (usually 2-4). I try to keep at least one or two posts from the previous update on the homepage alongside the posts from the new update.</span>
+						</div>
+
+					</div>
+
+					<div class="pj-bsrSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>3/6</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/bsr/3.png">
+
+						<div class="pj-caption">
+							<span>The "Search" button on the far right of the top navigation bar leads to the search page, where readers can search for reviews or articles via title. This is accomplished by iterating over the posts beforehand to build a json structure of post data and div ID, which is then compared to the user query when submitting a search, causing the post previews for any matching posts to be triggered into displaying via the ID.</span>
+						</div>
+
+					</div>
+
+					<div class="pj-bsrSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>4/6</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/bsr/4.png">
+
+						<div class="pj-caption">
+							<span>Each post, be it considered review or article, has a corresponding markdown file containing data to be plugged into my "post" html template by jekyll in order to generate the individual post pages. The review or aticle body itself makes up the 'content' section of the markdown file, while the yaml frontmatter contains data like the movie title, its review score, a path for its poster/image file, etc.</span>
+						</div>
+
+					</div>
+
+					<div class="pj-bsrSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>5/6</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/bsr/5.png">
+
+						<div class="pj-caption">
+							<span>This is the end result of the values from the previous markdown file being plugged into my 'post' Jekyll layout to generate the final page displayed on the website.</span>
+						</div>
+
+					</div>
+
+					<div class="pj-bsrSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>6/6</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/bsr/6.png">
+
+						<div class="pj-caption">
+							<span>I made a fun little parody 404 graphic that would be thematically appropriate for a movie review site should a reader find themselves lost. If all continues to go well, nobody will ever see it.</span>
+						</div>
+
+					</div>
+
+					<a class="pj-next" onclick="slideNav(+1, 'pj-bsrSlide')">&#10095;</a>
+
+				</div>
+			</div>
+
+			<div class="pj-external">
+				<a href="http://bitesizereviews.studiowayward.com/">Visit Website</a>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div id="pj-SWapp">
+
+		<div class="pj-titlebar" onclick="showProject('pj-son-hide', 'pj-sonSlide')">
+
+			<img class="pj-logo" src="/assets/images/resume/wayward-son.png">
+
+			<div class="pj-title">
+				<span>"Wayward's Son" Content Submission Applet</span>
+			</div>
+
+		</div>
+
+		<div id="pj-son-hide" class="res-pj">
+
+			<div class="pj-blurb">
+				<span>"Wayward's Son", named after the classic rock song, is a companion applet coded in Python with a basic TKinter interface. It is designed to automate and streamline some of the more tedious steps involved in post management for the <a href="http://studiowayward.com/">Studio Wayward</a> jekyll sites. (markdown generation, folder structures, asset naming, etc.)</span>
+			</div>
+
+			<div class="pj-gallery">
+
+				<div class="pj-slidecont">
+
+					<a class="pj-prev" onclick="slideNav(-1, 'pj-sonSlide')">&#10094;</a>
+
+					<div class="pj-sonSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>1/5</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/son/1.png">
+
+						<div class="pj-caption">
+							<span>We start off by choosing which site we'll be updating. Current functionality allows for the the creation of a new model, a new photoset, adding new photos to either that or an existing photoset, and the writing of a review or article.</span>
+						</div>
+
+					</div>
+
+					<div class="pj-sonSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>2/5</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/son/2.png">
+
+						<div class="pj-caption">
+							<span>The screen for model creation asks us for data values and details while taking care of the markdown formatting. Here, we're selecting a source folder for the images that will show up in the model's gallery. The program iterates through the source folder images, renames them in accordance with the Wayward file structure, and moves them to an appropriate assets subfolder. </span>
+						</div>
+
+					</div>
+
+					<div class="pj-sonSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>3/5</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/son/3.png">
+
+						<div class="pj-caption">
+							<span>Let's write a review. We input the required info (title, rating value, date, and so on), write the body of our review, select the poster image file (for this example, we'll use B.B. King), and hit Submit.</span>
+						</div>
+
+					</div>
+
+					<div class="pj-sonSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>4/5</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/son/4.png">
+
+						<div class="pj-caption">
+							<span>Here, we can see that our submitted values have been successfully carried over into a properly formatted markdown file with yaml frontmatter. The program gives us the option to terminate or to continue and start the post creation process again from the beginning.</span>
+						</div>
+
+					</div>
+
+					<div class="pj-sonSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>5/5</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/son/5.png">
+
+						<div class="pj-caption">
+							<span>Finally, after a quick push to the git repo, we see what our test review looks like on Bite-Size Reviews, B.B. King and all, noting that the newline formatting has carried over from the applet, to the markdown file, and finally, to our site post.</span>
+						</div>
+
+					</div>
+
+					<a class="pj-next" onclick="slideNav(+1, 'pj-sonSlide')">&#10095;</a>
+
+				</div>
+			</div>
+
+			<div class="pj-external">
+				<a href="https://github.com/asterisk93/StudioWayward/blob/gh-pages/assets/py/submissions.py">View Github Source</a>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div id="pj-howl">
+
+		<div class="pj-titlebar" onclick="showProject('pj-howl-hide', 'pj-howlSlide')">
+
+			<img class="pj-logo" src="/assets/images/resume/howl-logo.png">
+
+			<div class="pj-title">
+				<span>"WWHowl.net", Student Newspaper website creation/migration</span>
+			</div>
+
+		</div>
+
+		<div id="pj-howl-hide" class="res-pj">
+
+			<div class="pj-blurb">
+				<span>The Woodsworth Howl was a University of Toronto newspaper with a long and storied history. In my final year at UofT, I succeeded the position of Editor-in-Chief and migrated the newspaper to its new home online at wwhowl.net, seeking both to make it better fit in with an age of digital media, and to do away with the vulnerability the paper had to manipulation via its print budget. Wwhowl.net was a wordpress-based website styled by tweaking existing CSS themes and widgets, and using my graphic design work for the logos and banners. Unfortunately, since my graduation and departure, The Howl has been neglected and is now, to my knowledge, defunct. I've included a wayback machine link to the old site at the bottom of this section to give a rough idea of what it used to look like in its prime.</span>
+			</div>
+
+			<div class="pj-gallery">
+
+				<div class="pj-slidecont">
+
+					<a class="pj-prev" onclick="slideNav(-1, 'pj-howlSlide')">&#10094;</a>
+
+					<div class="pj-howlSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>1/6</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/howl/6.png">
+
+						<div class="pj-caption">
+							<span>The Howl Banner as it appeared throughout the site, and the about section.</span>
+						</div>
+
+					</div>
+
+					<div class="pj-howlSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>2/6</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/howl/1.png">
+
+						<div class="pj-caption">
+							<span>A look at article previews on a category collection page.</span>
+						</div>
+
+					</div>
+
+					<div class="pj-howlSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>3/6</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/howl/2.png">
+
+						<div class="pj-caption">
+							<span>Doing graphic work on the howl logo and perodical header graphic.</span>
+						</div>
+
+					</div>
+
+					<div class="pj-howlSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>4/6</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/howl/3.png">
+
+						<div class="pj-caption">
+							<span>The website construction page intercept featuring the updated Howl logo.</span>
+						</div>
+
+					</div>
+
+					<div class="pj-howlSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>5/6</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/howl/4.png">
+
+						<div class="pj-caption">
+							<span>My "welcome back" editorial on the front page of the Howl site, above the "This Issue" section for recent articles.</span>
+						</div>
+
+					</div>
+
+					<div class="pj-howlSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>6/6</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/howl/5.png">
+
+						<div class="pj-caption">
+							<span>The event calendar widget, and a drop-down category menu.</span>
+						</div>
+
+					</div>
+
+					<a class="pj-next" onclick="slideNav(+1, 'pj-howlSlide')">&#10095;</a>
+
+				</div>
+			</div>
+
+			<div class="pj-external">
+				<a href="https://web.archive.org/web/20161101145001/http://www.wwhowl.net/">Visit Archived Page</a>
+			</div>
+
+		</div>
+
+	</div>
+
+	<div id="pj-investigate">
+
+		<div class="pj-titlebar" onclick="showProject('pj-gate-hide', 'pj-gateSlide')">
+
+			<img class="pj-logo" src="/assets/images/resume/investigate.png">
+
+			<div class="pj-title">
+				<span>"InvestiGate" Educational Logic Gate Game/Sandbox</span>
+			</div>
+
+		</div>
+
+		<div id="pj-gate-hide" class="res-pj">
+
+			<div class="pj-blurb">
+				<span>InvestiGate was an academic group project designed and completed in my final year of university. InvestiGate was built using the PhaserJS game dev framework, and designed to be an interactive tool that would use gamification principles and experimentation to make circuit logic easier to learn. The prototype we submitted consisted of five levels meant to teach players about the function of AND, OR, and NOT gates, as well as an open sandbox mode allowing players to design their own gate/wire structures and observe the interactions that result.</span>
+			</div>
+
+			<div class="pj-gallery">
+
+				<div class="pj-slidecont">
+
+					<a class="pj-prev" onclick="slideNav(-1, 'pj-gateSlide')">&#10094;</a>
+
+					<div class="pj-gateSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>1/6</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/gate/1.gif">
+
+						<div class="pj-caption">
+							<span>The InvestiGate main menu.</span>
+						</div>
+
+					</div>
+
+					<div class="pj-gateSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>2/6</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/gate/2.gif">
+
+						<div class="pj-caption">
+							<span>An InvestiGate level, showing some Click-and-drag gameplay in progress. Players read the level prompt at the top of the screen, and click and drag gate sprites from the tray on the right, and onto the play area. Players then draw wires from the triangular input nodes assigned by the level, to the nodes on the gate sprite, and then from the gate sprite to the output node on the right.</span>
+						</div>
+
+					</div>
+
+					<div class="pj-gateSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>3/6</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/gate/2.png">
+
+						<div class="pj-caption">
+							<span>The level select screen was made out of nodes that would turn green to indicate the levels the player has unlocked. The 'switch' for the level would close if it was completed successfully. In this case, the player has successfully completed level one, and can choose to move on to level 2 or to replay level 1.</span>
+						</div>
+
+					</div>
+
+					<div class="pj-gateSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>4/6</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/gate/3.png">
+
+						<div class="pj-caption">
+							<span>This is a level abstract/mockup document I made for use in the layout planning and level design phase, Featuring a more cartoonish placeholder logo that we later adapted to be more sleek and modern.</span>
+						</div>
+
+					</div>
+
+					<div class="pj-gateSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>5/6</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/gate/4.png">
+
+						<div class="pj-caption">
+							<span>Wires are color-coded to show which signal (either a 1, or a 0) is running through them.</span>
+						</div>
+
+					</div>
+
+					<div class="pj-gateSlide fade">
+			
+						<div class="pj-slideNum">
+							<span>6/6</span>
+						</div>
+
+						<img class="pj-slideIMG" src="/assets/images/resume/gate/5.png">
+
+						<div class="pj-caption">
+							<span>Upon completing a level, a success dialog would pop up, either once again outlining the principle that the player had learnt by completing the level, or in this case, congratulating the player for completing all of the levels in a section.</span>
+						</div>
+
+					</div>
+
+					<a class="pj-next" onclick="slideNav(+1, 'pj-gateSlide')">&#10095;</a>
+
+				</div>
+			</div>
+			<br>
+			<br>
+		</div>
+
+	</div>
+</div>
+
+<div id="res-history">
+	
+	<img class="section-IMG" src="/assets/images/resume/history.png">
+
+	<div class="hist-item">
+		
+		<div class="hist-titlebar">
+
+			<img class="hist-graphic" src="/assets/images/resume/WAYWARD.png">
+
+			<div class="hist-title">
+				<span>Studio Wayward Lead Web/Graphic Designer</span>
+			</div>
+
+			<div class="hist-date">
+				<span>October 2017 - Present</span>
+			</div>
+
+		</div>
+
+		<div class="hist-blurb">
+			<span>As the sole creative talent behind <a href="http://studiowayward.com/">StudioWayward.com</a>, I have been responsible for all aspects of the site's aesthetic components as well as its functionality. A curated collection of my graphic work for Studio Wayward can be seen on display in the <a href="https://www.redbubble.com/people/studio-wayward/shop?asc=u">Wayward Redbubble T-shirt Store</a>. CSS styling on all three of the Studio Wayward sites was done from scratch, and all of the content, photography, and writing contained therein is of my own creation.</span>
+		</div>
+	</div>
+
+	<div class="hist-item">
+		
+		<div class="hist-titlebar">
+
+			<img class="hist-graphic" src="/assets/images/resume/fido.png">
+
+			<div class="hist-title">
+				<span>Fido Sales Representative</span>
+			</div>
+
+			<div class="hist-date">
+				<span>July 2016 -  July 2017</span>
+			</div>
+
+		</div>
+
+		<div class="hist-blurb">
+			<span>As a Fido sales rep, my duties included holding a store key and the safe codes for use in the store opening/closing routines, and general retail operations such as conducting POS transactions, inventory counts, EOD excel reports, EOD cash deposits. My technological expertise was useful when managing and maintaining the demo display units, installing store fixtures, diagnosing the source of customer device problems, and if possible, repairing them. I provided exemplary customer service, both in person when addressing customer issues and concerns, and over the phone while helping customers remotely sort out device issues and internet installations.</span>
+		</div>
+	</div>
+
+	<div class="hist-item">
+		
+		<div class="hist-titlebar">
+
+			<img class="hist-graphic" src="/assets/images/resume/broken.png">
+
+			<div class="hist-title">
+				<span>Freelance Computer Tech/Repairs</span>
+			</div>
+
+			<div class="hist-date">
+				<span>2012 - Present</span>
+			</div>
+
+		</div>
+
+		<div class="hist-blurb">
+			<span>I've repaired and maintained many laptop and desktop computers since high school, including the partial disassembly of laptops to swap out components like HDDs or keyboards, or to repair internal faults like loose power connectors/ribbon cables. I've also fully disassembled laptops into their base components to prevent the progression of water damage. I'm familiar with desktop maintenance and component installation (swapping case fans, upgrading ram, installing additional drives, reapplication of thermal paste, thorough dustings, proper cable management, etc.), and have built many customized desktops (including my own) from either self-sourced or client requested components.</span>
+		</div>
+	</div>
+
+	<div class="hist-item">
+		
+		<div class="hist-titlebar">
+
+			<img class="hist-graphic" src="/assets/images/resume/howl-medal.png">
+
+			<div class="hist-title">
+				<span>Woodsworth Howl Editor-in-Chief</span>
+			</div>
+
+			<div class="hist-date">
+				<span>2015 - 2016</span>
+			</div>
+
+		</div>
+
+		<div class="hist-blurb">
+			<span>Having been an occasional-turned-staff contributor, I formally joined The Howl in 2014 in the position of Arts and Entertainment Editor, and my experience curating the A&E and Fiction sections made me a good fit to take over Leadership of the paper the following year as Editor-in-Chief. As head of the paper, my responsibilities included editorial duties such as reviewing all submissions to ensure adherence to quality standards and Howl principles, as well as tech/webmaster duties, such as by migrating the Howl online to wwhowl.net, designing graphics and styling the site with CSS, and rebuilding previously abandoned parts into a functioning desktop workstation for use in the Howl office.</span>
+		</div>
+	</div>
+</div>
+
+<div id="res-contact">
+	
+	<img class="section-IMG" src="/assets/images/resume/contact.png">
+
+	<div class="section-tagline">
+		<span>Looking forward to hearing from you!</span>
+	</div>
+
+	<div id="contact-bar">
+		
+		<div class="contact-item">
+			
+			<img class="contact-graphic" src="/assets/images/resume/email.png">
+
+			<div class="contact-label">
+				<span>E-Mail</span>
+				<span>(Preferred)</span>
+			</div>
+
+			<div class="contact-info">
+				<span>Kevin.doodnauth</span>
+				<span>@hotmail.com</span>
+			</div>
+		</div>
+
+		<div class="contact-item">
+			
+			<img class="contact-graphic" src="/assets/images/resume/phone.png">
+
+			<div class="contact-label">
+				<span>Phone</span>
+				<br>
+				<br>
+			</div>
+
+			<div class="contact-info">
+				<span>+1 647-871-9428</span>
+			</div>
+		</div>
+
+		<div class="contact-item contact-ext">
+			<a href="https://github.com/asterisk93">
+				<img class="contact-graphic" src="/assets/images/resume/git.png">
+
+				<div class="contact-label">
+					<span>Github</span>
+					<br>
+					<br>
+
+				</div>
+
+				<div class="contact-info">
+					<span>&nbsp;</span>
+				</div>
+			</a>	
+		</div>
+
+		<div class="contact-item contact-ext">
+			<a href="https://ca.linkedin.com/">
+				<img class="contact-graphic" src="/assets/images/resume/link.png">
+
+				<div class="contact-label">
+					<span>LinkedIn</span>
+					<br>
+					<br>
+
+				</div>
+
+				<div class="contact-info">
+					<span>&nbsp;</span>
+				</div>
+			</a>
+		</div>
+
+	</div>
+</div>
+
+<script type="text/javascript">
+	var slideIndex = 1;
+
+	function slideNav(n, target) {
+		showSlides(slideIndex += n, target);
+	}
+
+	function currentSlide(n, target) {
+		showSlides(slideIndex = n, target);
+	}
+
+	function showSlides(n, target) {
+		var i;
+		var slides = document.getElementsByClassName(target);
+
+		if (n > slides.length){
+			slideIndex = 1;
+		}
+
+		if (n < 1){
+			slideIndex = slides.length;
+		}
+
+		for (i = 0; i < slides.length; i++){
+			slides[i].style.display = "none";
+		}
+
+
+		slides[slideIndex - 1].style.display = "block";
+	}
+
+	function showProject(pj, slide) {
+		var j;
+		var projects = document.getElementsByClassName("res-pj");
+		var project = document.getElementById(pj);
+		
+		
+		if (project.classList.contains("pj-open")){
+
+			for (j = 0; j < projects.length; j++){
+
+				if (projects[j].classList.contains("pj-open")){
+					projects[j].classList.remove("pj-open");
+				}
+			}
+
+		}
+
+		else{
+
+			for (j = 0; j < projects.length; j++){
+
+				if (projects[j].classList.contains("pj-open")){
+					projects[j].classList.remove("pj-open");
+				}
+			}
+
+			project.classList.add("pj-open");
+
+			slideIndex = 1;
+
+			showSlides(slideIndex, slide);
+
+		}
+		
+	}
+
+</script>
+		</div>
+
+		
+</body>
+
+</html>

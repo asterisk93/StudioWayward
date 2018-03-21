@@ -24,7 +24,7 @@ class SW_submit(tk.Tk):
         tk.Tk.__init__(self, *args, **kwargs)
 
         tk.Tk.iconbitmap(self, default="favicon.ico")
-        tk.Tk.wm_title(self, "Studio Wayward Submission App")
+        tk.Tk.wm_title(self, "Wayward's Son")
         container = tk.Frame(self)
         container.pack(side="top", fill="both", expand = True)
         container.grid_rowconfigure(0, weight=1)
@@ -67,13 +67,13 @@ class SW_submit(tk.Tk):
 
         if rating == "meal":
             front = '---\n layout: post\n title: "' + title + '"\n date:  ' + year + '-' + month + '-' + day + '\n categories: opinion\n image: "' + keyword + '.jpg"\n permalink: /:title\n---'
-            filename = year + '-' + day + '-' + month + '-MEAL-' + str.replace(str.replace(title, ' ', '-'), ':', '-') + '.markdown'
+            filename = year + '-' + month + '-' + day + '-MEAL-' + str.replace(str.replace(title, ' ', '-'), ':', '-') + '.markdown'
             img_path = bsr_local + '/assets/article-images/'
             shutil.move(poster, img_path + keyword + '.jpg')
             
         else:
             front = '---\n layout: post\n title: "' + title + '"\n date:  ' + year + '-' + month + '-' + day + '\n categories: review\n rating: "' + rating + '"\n light: "' + color + '"\n poster: "' + keyword + '.jpg"\n permalink: /:title\n---'
-            filename = year + '-' + day + '-' + month + '-' + str.replace(str.replace(title, ' ', '-'), ':', '-') + '.markdown'
+            filename = year + '-' + month + '-' + day + '-' + str.replace(str.replace(title, ' ', '-'), ':', '-') + '.markdown'
             img_path = bsr_local + '/assets/posters/'
             shutil.move(poster, img_path + keyword + '.jpg')
             
@@ -102,7 +102,7 @@ class SW_submit(tk.Tk):
         text = cont.set_desc.get("1.0",'end-1c')
 
         #create filename
-        filename = year + '-' + day + '-' + month + '-' + str.replace(str.replace(title, ' ', '-'), ':', '-') + '.markdown'
+        filename = year + '-' + month + '-' + day + '-' + str.replace(str.replace(title, ' ', '-'), ':', '-') + '.markdown'
 
         #frontmatter
         front = '---\n layout: post\n type: photography, photoset\n permalink: /photography/:title\n title: ' + title + '\n date:  ' + year + '-' + month + '-' + day + '\n keyword: ' + keyword + '\n---'
@@ -150,7 +150,7 @@ class SW_submit(tk.Tk):
         os.makedirs(dest_asset_dir)
         
         #filename and frontmatter, file migration
-        filename = year + '-' + day + '-' + month + '-' + str.replace(str.replace(title, ' ', '-'), ':', '-') + '.markdown'
+        filename = year + '-' + month + '-' + day + '-' + str.replace(str.replace(title, ' ', '-'), ':', '-') + '.markdown'
         front = '---\nlayout: post\ntype: model\npermalink: /models/:title\ntitle: ' + title + '\nscale: ' + scale +'\ndate:  ' + year + '-' + month + '-' + day + '\nfolder: ' + keyword +'\nanimate: ' + animate + '\npreview: ' + preview + '\nphotos:\n'
 
         shutil.move(img_preview, (dest_asset_dir + 'preview.png'))
