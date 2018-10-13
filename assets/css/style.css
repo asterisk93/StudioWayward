@@ -44,7 +44,7 @@ a {
 
 @media only screen and (max-width: 360px) {
 	#home-bannerImg{
-		width: 50%;
+		width: 90%;
 	}
 }
 
@@ -55,6 +55,12 @@ a {
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-around;
+}
+
+@media only screen and (max-width: 360px) {
+	#home-triContainer{
+		display: none;
+	}
 }
 
 .home-triButton{
@@ -96,6 +102,36 @@ a {
 
 #home-bsrButtonImg:hover{
 	opacity: 1;
+}
+
+#home-mobileTri {
+	display: none;
+}
+
+@media only screen and (max-width: 360px) {
+	#home-mobileTri{
+		width: 60%;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+.home-MobileTriButton{
+	text-align: center;
+	margin: 10px;
+}
+
+#home-modelButtonImgSmall{
+	width: 100%;
+}
+
+#home-photoButtonImgSmall{
+	width: 100%;
+}
+
+#home-bsrButtonImgSmall{
+	width: 100%;
 }
 
 #home-navContainer{
