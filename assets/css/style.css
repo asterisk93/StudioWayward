@@ -41,7 +41,7 @@ a {
 @media only screen and (max-width: 420px){
 	#home-banner{
 		margin-top: 30px;
-		margin-bottom: 30px;
+		margin-bottom: 40px;
 	}
 }
 #home-bannerImg{
@@ -208,7 +208,7 @@ a .home-navText{
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	margin-top: 30px;
+	margin-top: 50px;
 	}
 }
 
