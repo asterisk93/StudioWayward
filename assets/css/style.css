@@ -38,6 +38,12 @@ a {
 	margin-bottom: 60px;
 }
 
+@media only screen and (max-width: 360px){
+	#home-banner{
+		margin-top: 30px;
+		margin-bottom: 30px;
+	}
+}
 #home-bannerImg{
 	width: 20%;
 }
@@ -124,14 +130,17 @@ a {
 
 #home-modelButtonImgSmall{
 	width: 100%;
+	border-radius: 5px;
 }
 
 #home-photoButtonImgSmall{
 	width: 100%;
+	border-radius: 5px;
 }
 
 #home-bsrButtonImgSmall{
 	width: 100%;
+	border-radius: 5px;
 }
 
 #home-navContainer{
@@ -143,6 +152,10 @@ a {
 	align-items: center;
 	justify-content: center;
 	margin-top: 60px;
+}
+
+#home-mobileNav{
+	display: none;
 }
 
 #home-blog{
@@ -182,6 +195,30 @@ a .home-navText{
 	color: #aa0000;
 }
 
+@media only screen and (max-width: 360px){
+	#home-navContainer{
+		display: none;
+	}
+
+	#home-mobileNav{
+	width: 50%;
+	text-align: center;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	margin-top: 30px;
+	}
+}
+
+.home-mNavIcon{
+	padding: 5px;
+}
+
+.home-mNavIconImg{
+	width: 20%;
+}
 
 /**
 ---------------------------------Model Works Homepage---------------------------------
