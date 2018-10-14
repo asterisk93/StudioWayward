@@ -201,7 +201,7 @@ a .home-navText{
 	}
 
 	#home-mobileNav{
-	width: 50%;
+	width: 80%;
 	text-align: center;
 	margin: 0 auto;
 	display: flex;
@@ -212,8 +212,24 @@ a .home-navText{
 	}
 }
 
+#home-mNavIconBlog{
+	padding: 0 20px;
+	border-left-style: solid;
+	border-top-left-radius: 5px;
+	border-bottom-left-radius: 5px; 
+}
+
 .home-mNavIcon{
-	padding: 5px;
+	padding: 0 20px;
+	border-left-style: solid;
+}
+
+#home-mNavIconContact{
+	padding: 0 20px;
+	border-left-style: solid;
+	border-right-style: solid;
+	border-top-right-radius: 5px;
+	border-bottom-right-radius: 5px; 
 }
 
 .home-mNavIconImg{
