@@ -183,7 +183,7 @@ a {
 .home-navText{
 	font-family: helvetica;
 	font-weight: bold;
-	font-size: 0.8vw;
+	font-size: 1.0vw;
 	text-transform: uppercase;
 }
 
@@ -269,7 +269,7 @@ a .home-navText{
 
 #mw-featuredText{
 	font-family: steagisler;
-	font-size: 1.7vw;
+	font-size: 1.9vw;
 	text-transform: uppercase;
 }
 
@@ -292,7 +292,7 @@ a #mw-featuredText{
 
 #mw-featTitle{
 	font-family: steagisler;
-	font-size: 1.2vw;
+	font-size: 1.6vw;
 	text-transform: uppercase;
 	padding-top: 10px;	
 }
@@ -303,7 +303,7 @@ a #mw-featTitle{
 
 #mw-featScale{
 	font-family: steagisler;
-	font-size: 1.0vw;
+	font-size: 1.5vw;
 	text-transform: uppercase;
 	padding-top: 10px;
 }
@@ -314,7 +314,7 @@ a #mw-featScale{
 
 #mw-featBlurb{
 	font-family: helvetica;
-	font-size: 1.0vw;
+	font-size: 1.3vw;
 }
 
 a #mw-featBlurb{
@@ -323,7 +323,7 @@ a #mw-featBlurb{
 
 #mw-gallery{
 	box-sizing: border-box;
-	width: 40%;
+	width: 45%;
 	border-style: solid;
 	border-width: 1px;
 	border-radius: 5px;
@@ -336,7 +336,7 @@ a #mw-featBlurb{
 
 #mw-galleryHeading{
 	font-family: steagisler;
-	font-size: 1.5vw;
+	font-size: 1.7vw;
 	text-transform: uppercase;
 	color: #4a4a4a;	
 }
@@ -356,7 +356,7 @@ a #mw-featBlurb{
 
 .mw-galleryItem{
 	text-align: center;
-	width: 40%;
+	width: 100%;
 	padding: 15px;
 	border-style: solid;
 	border-width: 1px;
@@ -376,7 +376,7 @@ a #mw-featBlurb{
 
 .mw-itemTitle{
 	font-family: steagisler;
-	font-size: 1vw;
+	font-size: 1.5vw;
 	text-transform: uppercase;
 	padding-top: 5px;
 }
@@ -404,7 +404,7 @@ a .mw-itemTitle{
 
 #mw-postTitle{
 	font-family: steagisler;
-	font-size: 1.8vw;
+	font-size: 2.6vw;
 	text-transform: uppercase;
 	padding-top: 10px;
 	color: #4a4a4a;	
@@ -413,7 +413,7 @@ a .mw-itemTitle{
 
 #mw-postScale{
 	font-family: steagisler;
-	font-size: 1.25vw;
+	font-size: 1.7vw;
 	text-transform: uppercase;
 	padding-top: 10px;
 	color: #4a4a4a;
@@ -422,13 +422,13 @@ a .mw-itemTitle{
 
 #mw-postBlurb{
 	font-family: helvetica;
-	font-size: 1.0vw;
+	font-size: 1.5vw;
 	color: #4a4a4a;
 }
 
 #mw-postGallery{
 	box-sizing: border-box;
-	max-width: 70%;
+	max-width: 80%;
 	position: relative;
 	margin: auto;
 	margin-top: 30px;
