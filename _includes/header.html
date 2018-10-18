@@ -8,7 +8,11 @@
 	<img id="header-bannerRight" src="{{site.baseurl}}/assets/images/models/banner-right.png">
 </div>
 
-
+<div id="mw-mobileBanner">
+	<a href="{{ site.baseurl }}/models">
+		<img id="mw-mobileBannerImg" src="{{site.baseurl}}/assets/images/models/banner-mobile.png">
+	</a>
+</div>
 
 <style type="text/css">
 	
@@ -33,6 +37,26 @@
 
 	#header-bannerRight{
 		height: 80px;
+	}
+
+	#mw-mobileBanner{
+		display: none;
+	}
+
+	@media only screen and (max-width: 420px){
+		#header-bar{
+			display: none;
+		}
+
+		#mw-mobileBanner{
+			display: block;
+			margin: 0 auto;
+			padding: 5px;
+		}
+
+		#mw-mobileBannerImg{
+			width: 100%;
+		}
 	}
 
 </style>
@@ -89,6 +113,12 @@
 
 	#header-banner{
 		height: 60px;
+	}
+
+	@media only screen and (max-width: 420px){
+		#header-bar{
+			display: none;
+		}
 	}
 
 </style>
