@@ -388,6 +388,12 @@ a #mw-featBlurb{
 	color: #4a4a4a;	
 }
 
+@media only screen and (max-width: 420px){
+	#mw-galleryHeading{
+		font-size: 6.8vw;
+	}
+}
+
 #mw-galleryContainer{
 	text-align: center;
 	border-style: solid;
@@ -399,6 +405,12 @@ a #mw-featBlurb{
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-around;	
+}
+
+@media only screen and (max-width: 420px){
+	#mw-galleryContainer{
+		padding: 0px;
+	}
 }
 
 .mw-galleryItem{
@@ -430,6 +442,12 @@ a #mw-featBlurb{
 
 a .mw-itemTitle{
 	color: #4a4a4a;
+}
+
+@media only screen and (max-width: 420px){
+	.mw-itemTitle{
+		font-size: 5vw;
+	}
 }
 
 /**
