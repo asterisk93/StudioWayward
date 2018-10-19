@@ -272,7 +272,9 @@ a .home-navText{
 
 @media only screen and (max-width: 420px){
 	#mw-featuredContainer{
-		width: 80%;
+		width: 90%;
+		margin-top: 20px;
+
 	}
 }
 
@@ -288,6 +290,12 @@ a .home-navText{
 
 a #mw-featuredText{
 	color: #4a4a4a;
+}
+
+@media only screen and (max-width: 420px){
+	#mw-featuredText{
+		font-size: 7vw;
+	}
 }
 
 #mw-jumbotron{
@@ -314,6 +322,12 @@ a #mw-featTitle{
 	color: #4a4a4a;
 }
 
+@media only screen and (max-width: 420px){
+	#mw-featTitle{
+		font-size: 5vw;
+	}
+}
+
 #mw-featScale{
 	font-family: steagisler;
 	font-size: 1.5vw;
@@ -325,6 +339,12 @@ a #mw-featScale{
 	color: #4a4a4a;	
 }
 
+@media only screen and (max-width: 420px){
+	#mw-featScale{
+		font-size: 4.5vw;
+	}
+}
+
 #mw-featBlurb{
 	font-family: helvetica;
 	font-size: 1.3vw;
@@ -332,6 +352,12 @@ a #mw-featScale{
 
 a #mw-featBlurb{
 	color: #4a4a4a;
+}
+
+@media only screen and (max-width: 420px){
+	#mw-featBlurb{
+		font-size: 4vw;
+	}
 }
 
 #mw-gallery{
@@ -349,7 +375,9 @@ a #mw-featBlurb{
 
 @media only screen and (max-width: 420px){
 	#mw-gallery{
-		width: 80%;
+		width: 90%;
+		margin: 0 auto;
+		margin-top: 20px;
 	}
 }
 
