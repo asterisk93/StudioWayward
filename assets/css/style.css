@@ -467,6 +467,12 @@ a .mw-itemTitle{
 	color: #4a4a4a;
 }
 
+@media only screen and (max-width: 420px){
+	#mw-postInfo{
+		width: 80%;
+	}
+}
+
 #mw-postTitle{
 	font-family: steagisler;
 	font-size: 2.6vw;
@@ -474,6 +480,12 @@ a .mw-itemTitle{
 	padding-top: 10px;
 	color: #4a4a4a;	
 	text-align: center;
+}
+
+@media only screen and (max-width: 420px){
+	#mw-postTitle{
+		font-size: 7vw;
+	}
 }
 
 #mw-postScale{
@@ -485,10 +497,22 @@ a .mw-itemTitle{
 	text-align: center;
 }
 
+@media only screen and (max-width: 420px){
+	#mw-postScale{
+		font-size: 5.5vw;
+	}
+}
+
 #mw-postBlurb{
 	font-family: helvetica;
 	font-size: 1.5vw;
 	color: #4a4a4a;
+}
+
+@media only screen and (max-width: 420px){
+	#mw-postBlurb{
+		font-size: 4.5vw;
+	}
 }
 
 #mw-postGallery{
@@ -500,6 +524,12 @@ a .mw-itemTitle{
 	background-color: #BBBBBB;
 	padding: 20px; 
 	border-radius: 10px;
+}
+
+@media only screen and (max-width: 420px){
+	#mw-postGallery{
+		max-width: unset;
+	}
 }
 
 .mw-postSlide{
@@ -570,6 +600,14 @@ a .mw-itemTitle{
 	height: 35vw;
 	max-height: 35vw;
 	max-width: 80vw;
+}
+
+@media only screen and (max-width: 420px){
+	.mw-slideIMG{
+		height: 80vw;
+		max-height: 80vw;
+		max-width: 190vw;
+	}
 }
 
 .dot{
