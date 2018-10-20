@@ -605,7 +605,7 @@ a .mw-itemTitle{
 @media only screen and (max-width: 420px){
 	.mw-slideIMG{
 		height: 80vw;
-		max-height: 80vw;
+		max-height: 45vw;
 		max-width: 190vw;
 	}
 }
