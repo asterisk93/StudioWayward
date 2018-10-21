@@ -953,11 +953,11 @@ a .mw-itemTitle{
 .footer-btn{
 	font-family: helvetica;
 	font-size: 1vw;
-	width: 10%;
 	text-transform: uppercase;
 	line-height: 35px;
 	border-width: 0px;
 	border-radius: 5px;
+	width: 10%;
 }
 
 .footer-btn span{
