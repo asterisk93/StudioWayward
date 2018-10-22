@@ -38,20 +38,8 @@ a {
 	margin-bottom: 60px;
 }
 
-@media only screen and (max-width: 420px){
-	#home-banner{
-		margin-top: 30px;
-		margin-bottom: 40px;
-	}
-}
 #home-bannerImg{
 	width: 20%;
-}
-
-@media only screen and (max-width: 420px) {
-	#home-bannerImg{
-		width: 90%;
-	}
 }
 
 #home-triContainer{
@@ -61,12 +49,6 @@ a {
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-around;
-}
-
-@media only screen and (max-width: 420px) {
-	#home-triContainer{
-		display: none;
-	}
 }
 
 .home-triButton{
@@ -110,39 +92,6 @@ a {
 	opacity: 1;
 }
 
-#home-mobileTri {
-	display: none;
-}
-
-@media only screen and (max-width: 420px) {
-	#home-mobileTri{
-		width: 60%;
-		margin: 0 auto;
-		display: flex;
-		flex-direction: column;
-	}
-}
-
-.home-MobileTriButton{
-	text-align: center;
-	margin: 10px;
-}
-
-#home-modelButtonImgSmall{
-	width: 100%;
-	border-radius: 5px;
-}
-
-#home-photoButtonImgSmall{
-	width: 100%;
-	border-radius: 5px;
-}
-
-#home-bsrButtonImgSmall{
-	width: 100%;
-	border-radius: 5px;
-}
-
 #home-navContainer{
 	width: 40%;
 	text-align: center;
@@ -152,10 +101,6 @@ a {
 	align-items: center;
 	justify-content: center;
 	margin-top: 60px;
-}
-
-#home-mobileNav{
-	display: none;
 }
 
 #home-blog{
@@ -183,7 +128,7 @@ a {
 .home-navText{
 	font-family: helvetica;
 	font-weight: bold;
-	font-size: 1.0vw;
+	font-size: 0.8vw;
 	text-transform: uppercase;
 }
 
@@ -195,43 +140,6 @@ a .home-navText{
 	color: #aa0000;
 }
 
-@media only screen and (max-width: 420px){
-	#home-navContainer{
-		display: none;
-	}
-
-	#home-mobileNav{
-	width: 80%;
-	text-align: center;
-	margin: 0 auto;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	justify-content: center;
-	margin-top: 50px;
-	}
-}
-
-#home-mNavIconBlog{
-	border-left-style: solid;
-	border-top-left-radius: 5px;
-	border-bottom-left-radius: 5px; 
-}
-
-.home-mNavIcon{
-	border-left-style: solid;
-}
-
-#home-mNavIconContact{
-	border-left-style: solid;
-	border-right-style: solid;
-	border-top-right-radius: 5px;
-	border-bottom-right-radius: 5px; 
-}
-
-.home-mNavIconImg{
-	width: 50%;
-}
 
 /**
 ---------------------------------Model Works Homepage---------------------------------
@@ -251,13 +159,6 @@ a .home-navText{
 	margin: 0 auto;
 }
 
-@media only screen and (max-width: 420px){
-	#mw-container{
-		flex-direction: column;
-		align-items: center;
-	}
-}
-
 #mw-featuredContainer{
 	box-sizing: border-box;
 	width: 40%;
@@ -270,32 +171,18 @@ a .home-navText{
 	background-color: white;
 }
 
-@media only screen and (max-width: 420px){
-	#mw-featuredContainer{
-		width: 90%;
-		margin-top: 20px;
-
-	}
-}
-
 #mw-featuredContainer:hover{
 	border-color: black;
 }
 
 #mw-featuredText{
 	font-family: steagisler;
-	font-size: 1.9vw;
+	font-size: 1.7vw;
 	text-transform: uppercase;
 }
 
 a #mw-featuredText{
 	color: #4a4a4a;
-}
-
-@media only screen and (max-width: 420px){
-	#mw-featuredText{
-		font-size: 7vw;
-	}
 }
 
 #mw-jumbotron{
@@ -313,7 +200,7 @@ a #mw-featuredText{
 
 #mw-featTitle{
 	font-family: steagisler;
-	font-size: 1.6vw;
+	font-size: 1.2vw;
 	text-transform: uppercase;
 	padding-top: 10px;	
 }
@@ -322,15 +209,9 @@ a #mw-featTitle{
 	color: #4a4a4a;
 }
 
-@media only screen and (max-width: 420px){
-	#mw-featTitle{
-		font-size: 5vw;
-	}
-}
-
 #mw-featScale{
 	font-family: steagisler;
-	font-size: 1.5vw;
+	font-size: 1.0vw;
 	text-transform: uppercase;
 	padding-top: 10px;
 }
@@ -339,30 +220,18 @@ a #mw-featScale{
 	color: #4a4a4a;	
 }
 
-@media only screen and (max-width: 420px){
-	#mw-featScale{
-		font-size: 4.5vw;
-	}
-}
-
 #mw-featBlurb{
 	font-family: helvetica;
-	font-size: 1.3vw;
+	font-size: 1.0vw;
 }
 
 a #mw-featBlurb{
 	color: #4a4a4a;
 }
 
-@media only screen and (max-width: 420px){
-	#mw-featBlurb{
-		font-size: 4vw;
-	}
-}
-
 #mw-gallery{
 	box-sizing: border-box;
-	width: 45%;
+	width: 40%;
 	border-style: solid;
 	border-width: 1px;
 	border-radius: 5px;
@@ -373,25 +242,11 @@ a #mw-featBlurb{
 	margin-left: 30px;
 }
 
-@media only screen and (max-width: 420px){
-	#mw-gallery{
-		width: 90%;
-		margin: 0 auto;
-		margin-top: 20px;
-	}
-}
-
 #mw-galleryHeading{
 	font-family: steagisler;
-	font-size: 1.7vw;
+	font-size: 1.5vw;
 	text-transform: uppercase;
 	color: #4a4a4a;	
-}
-
-@media only screen and (max-width: 420px){
-	#mw-galleryHeading{
-		font-size: 6.8vw;
-	}
 }
 
 #mw-galleryContainer{
@@ -407,15 +262,9 @@ a #mw-featBlurb{
 	justify-content: space-around;	
 }
 
-@media only screen and (max-width: 420px){
-	#mw-galleryContainer{
-		padding: 0px;
-	}
-}
-
 .mw-galleryItem{
 	text-align: center;
-	width: 100%;
+	width: 40%;
 	padding: 15px;
 	border-style: solid;
 	border-width: 1px;
@@ -435,19 +284,13 @@ a #mw-featBlurb{
 
 .mw-itemTitle{
 	font-family: steagisler;
-	font-size: 1.5vw;
+	font-size: 1vw;
 	text-transform: uppercase;
 	padding-top: 5px;
 }
 
 a .mw-itemTitle{
 	color: #4a4a4a;
-}
-
-@media only screen and (max-width: 420px){
-	.mw-itemTitle{
-		font-size: 5vw;
-	}
 }
 
 /**
@@ -467,69 +310,39 @@ a .mw-itemTitle{
 	color: #4a4a4a;
 }
 
-@media only screen and (max-width: 420px){
-	#mw-postInfo{
-		width: 80%;
-	}
-}
-
 #mw-postTitle{
 	font-family: steagisler;
-	font-size: 2.6vw;
+	font-size: 1.8vw;
 	text-transform: uppercase;
 	padding-top: 10px;
 	color: #4a4a4a;	
 	text-align: center;
 }
 
-@media only screen and (max-width: 420px){
-	#mw-postTitle{
-		font-size: 7vw;
-	}
-}
-
 #mw-postScale{
 	font-family: steagisler;
-	font-size: 1.7vw;
+	font-size: 1.25vw;
 	text-transform: uppercase;
 	padding-top: 10px;
 	color: #4a4a4a;
 	text-align: center;
 }
 
-@media only screen and (max-width: 420px){
-	#mw-postScale{
-		font-size: 5.5vw;
-	}
-}
-
 #mw-postBlurb{
 	font-family: helvetica;
-	font-size: 1.5vw;
+	font-size: 1.0vw;
 	color: #4a4a4a;
-}
-
-@media only screen and (max-width: 420px){
-	#mw-postBlurb{
-		font-size: 4.5vw;
-	}
 }
 
 #mw-postGallery{
 	box-sizing: border-box;
-	max-width: 80%;
+	max-width: 70%;
 	position: relative;
 	margin: auto;
 	margin-top: 30px;
 	background-color: #BBBBBB;
 	padding: 20px; 
 	border-radius: 10px;
-}
-
-@media only screen and (max-width: 420px){
-	#mw-postGallery{
-		max-width: unset;
-	}
 }
 
 .mw-postSlide{
@@ -600,14 +413,6 @@ a .mw-itemTitle{
 	height: 35vw;
 	max-height: 35vw;
 	max-width: 80vw;
-}
-
-@media only screen and (max-width: 420px){
-	.mw-slideIMG{
-		height: 80vw;
-		max-height: 45vw;
-		max-width: 190vw;
-	}
 }
 
 .dot{
