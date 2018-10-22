@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>NG Exia (Graphite Worn)</title>
+	
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 	
 		<meta name="description" content="NG Exia (Graphite Worn) - Scale Models, Gunpla, Dioramas @ Wayward Model Works">
@@ -25,7 +27,11 @@
 	<img id="header-bannerRight" src="/assets/images/models/banner-right.png">
 </div>
 
-
+<div id="mw-mobileBanner">
+	<a href="/models">
+		<img id="mw-mobileBannerImg" src="/assets/images/models/banner-mobile.png">
+	</a>
+</div>
 
 <style type="text/css">
 	
@@ -42,14 +48,40 @@
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
+		width: 100%
 	}
 
 	#header-banner{
-		height: 80px;
+		width: 45%;
 	}
 
 	#header-bannerRight{
-		height: 80px;
+		width: 20%;
+	}
+
+	#mw-mobileBanner{
+		display: none;
+	}
+
+	@media only screen and (max-width: 420px){
+		#header-bar{
+			display: none;
+		}
+
+		#mw-mobileBanner{
+			display: block;
+			margin: 0 auto;
+			padding: 7px;
+			background-color: white;
+			border-radius: 5px;
+			width: 95%;
+			margin-top: 5px;
+		}
+
+		#mw-mobileBannerImg{
+			width: 100%;
+			border-radius: 5px;
+		}
 	}
 
 </style>
@@ -291,9 +323,9 @@
 
 	<div id="footer-container">
 		
-		<div class="footer-btn">
+		<div class="footer-btn-main">
 			<a href="/">
-				<img id="footer-home" src="/assets/images/general/SW-general-footer.png">
+				<img id="footer-home" src="/assets/images/general/SW-general-footer-small.png">
 			</a>
 		</div>
 
@@ -346,6 +378,14 @@
 <style type="text/css">
 	#footer-container{
 		background-color: white;
+		width: 100%;
+		align-self: end;
+	}
+
+	@media only screen and (max-width: 420px){
+		#footer-container{
+			display: none;
+		}
 	}
 
 	.footer-btn a{
