@@ -951,9 +951,9 @@ a .mw-itemTitle{
 }
 
 .footer-btn{
-	width: 10%;
 	font-family: helvetica;
-	font-size: 1vw;
+	font-size: 14px;
+	height: 35px;
 	text-transform: uppercase;
 	line-height: 35px;
 	border-width: 0px;
@@ -967,7 +967,7 @@ a .mw-itemTitle{
 .footer-btn-main{
 	font-family: steagisler;
 	font-size: 16px;
-	width: 10%;
+	height: 35px;
 	text-transform: uppercase;
 	line-height: 35px;
 	border-width: 0px;
@@ -979,7 +979,7 @@ a .mw-itemTitle{
 }
 
 /**
----------------------------------Resume Page--------------------------------
+---------------------------------Resume Page---------------------------------
 **/
 
 #res-header{
