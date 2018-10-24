@@ -99,6 +99,33 @@
 	</div>
 </div>
 
+<div id="photo-mobileHeader">	
+
+	<div id="photo-mobileBanner">
+		<a href="{{ site.baseurl }}/photography">
+			<img id="photo-mobileBannerImg" src="{{site.baseurl}}/assets/images/photography/banner-mobile.png">
+		</a>
+	</div>
+
+	<div id="photo-navBar">
+
+		<div class="photo-nav">
+			<a href="{{ site.baseurl }}/photo-gallery">
+				<span>&#10096; Gallery &#10097;</span>
+			</a>
+		</div>
+
+		<div class="photo-nav" id="photoDD">
+			<span>&#10096; Recurring Themes &#10097;</span>
+
+			<div id="photoDDsets">
+				{% for set in sets %}
+				<a href="{{ site.baseurl }}{{ set.url }}">{{ set.title }}</a>
+				{% endfor %}
+			</div>
+		</div>
+	</div>
+</div>
 
 <style type="text/css">
 	
@@ -115,17 +142,39 @@
 		align-items: center;
 	}
 
+	#photo-mobileHeader{
+		display: none;
+	}
+
 	#header-banner{
-		width: 35%;
+		width: 30%;
 	}
 
 	#header-bannerIMG{
 		padding-left: 1%;
+		width: 100%;
 	}
 
 	@media only screen and (max-width: 420px){
 		#header-bar{
 			display: none;
+		}
+
+		#photo-mobileHeader{
+			display: block;
+			margin: 0 auto;
+			margin-top: 15px;
+			width: 90%;
+			text-align: center;
+		}
+
+		#photo-mobileBannerIMG{
+			width: 100%;
+		}
+
+		#photo-navBar{
+			justify-content: space-around;
+			width: 70%;
 		}
 	}
 

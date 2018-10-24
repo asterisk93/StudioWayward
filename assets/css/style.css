@@ -652,7 +652,6 @@ a .mw-itemTitle{
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-	width: 100%;
 }
 
 .photo-nav{
@@ -660,12 +659,8 @@ a .mw-itemTitle{
 	font-size: 1.5vw;
 	text-transform: uppercase;
 	color: #ffab18;
-	padding: 15px;
+	padding: 2vw;
 	cursor: pointer;
-}
-
-.photo-nav span{
-	height: 70px;
 }
 
 .photo-nav a{
