@@ -942,22 +942,21 @@ a .mw-itemTitle{
 	flex-direction: row;
 	justify-content: space-around;
 	align-items: center;
-	padding: 5px;
+	padding: .1%;
+	border-radius: 5px;
 }
 
 #footer-home{
-	height: 35px;
-	padding: 0 10px;
+	width: 3.5vw;
 }
 
 .footer-btn{
-	width: 10%;
 	font-family: helvetica;
-	font-size: 1vw;
+	font-size: .7vw;
 	text-transform: uppercase;
-	line-height: 35px;
 	border-width: 0px;
 	border-radius: 5px;
+	padding: 1vw;
 }
 
 .footer-btn span{
@@ -966,12 +965,11 @@ a .mw-itemTitle{
 
 .footer-btn-main{
 	font-family: steagisler;
-	font-size: 1.3vw;
-	width: 10%;
+	font-size: 1vw;
 	text-transform: uppercase;
-	line-height: 35px;
 	border-width: 0px;
 	border-radius: 5px;
+	padding: 1vw;
 }
 
 .footer-btn-main span{
