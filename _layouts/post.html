@@ -141,7 +141,7 @@ layout: wrapper
 			<div id="swp-recentGallery">
 		
 				{% for post in photos %}
-				{% if post.type == "photography, picture" %}
+				{% if post.type contains "picture" %}
 					<div class="swp-recentItem">
 					
 						<img class="swp-recentThumb" src="{{ site.baseurl }}/assets/images/photography/{{ post.keyword }}/{{ post.imgpath }}" onclick="openModal();currentSlide({{ forloop.index }})">
