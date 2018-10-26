@@ -124,7 +124,6 @@ layout: wrapper
 	{% if page.type contains "photoset" %}
 
 	{% assign photos = site.posts | where:"keyword", page.keyword %}
-	{% assign photos = photos | where:"type", "photography, picture" %}
 
 		<div id="photoset-container">
 			<div id="swp-recentText">
@@ -142,13 +141,13 @@ layout: wrapper
 			<div id="swp-recentGallery">
 		
 				{% for post in photos %}
-
+				{% if post.type == "photography, picture" %}
 					<div class="swp-recentItem">
 					
 						<img class="swp-recentThumb" src="{{ site.baseurl }}/assets/images/photography/{{ post.keyword }}/{{ post.imgpath }}" onclick="openModal();currentSlide({{ forloop.index }})">
 
 					</div>
-
+				{% endif %}
 				{% endfor %}
 
 				<script src="https://unpkg.com/scrollreveal/dist/scrollreveal.min.js"></script>
