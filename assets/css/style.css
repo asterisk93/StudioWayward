@@ -978,36 +978,37 @@ a .mw-itemTitle{
 #res-header{
 	text-align: center;
 	margin: 0 auto;
-	margin-top: 9vw;
+	min-height: 100vh;
 }
 
 #res-logoIMG{
-	height: 14vw;
+	width: 60%;
+	margin-top: 7vw;
 }
 
 #res-tagline{
 	font-family: steagisler;
-	font-size: 1.4vw;
-	margin-top: 80px;
-	margin-bottom: 80px;
+	font-size: 2vw;
+	margin-top: 3vw;
 	text-transform: uppercase;
 }
 
 #header-nav{
 	display: flex;
 	flex-direction: row;
-	justify-content: space-between;
-	width: 35%;
+	justify-content: center;
 	margin: 0 auto;
-	margin-bottom: 25%;
+	margin-top: 5vw;
+
 }
 
 #res-nav{
-	font-size: 1.5vw;
+	font-size: 2.5vw;
 	font-family: steagisler;
 	border-bottom-style: solid;
 	border-bottom-width: 5px;
-	border-bottom-color: black;  
+	border-bottom-color: black;
+	margin: 0 1.5vw;  
 }
 
 #res-nav a{
@@ -1024,16 +1025,19 @@ a .mw-itemTitle{
 
 #res-projects{
 	text-align: center;
+	padding-top: 1.5vw;
 }
 
 #res-history{
 	text-align: center;
 	margin-top: 25%;
+	padding-top: 1.5vw;
 }
 
 #res-contact{
 	text-align: center;
 	margin-top: 25%;
+	padding-top: 1.5vw;
 }
 
 .section-IMG{
