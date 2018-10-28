@@ -971,6 +971,50 @@ a .mw-itemTitle{
 	padding: 5px;
 }
 
+#mobile-footer{
+	display: none;
+}
+
+@media only screen and (max-width: 420px){
+	
+	#mobile-footer{
+		display: flex;
+		flex-direction: column;
+		width: 90%;
+		text-align: center;
+		margin: 0 auto;
+	}
+}
+
+#mobile-footer-main{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+#mobile-footer-sub{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+	width: 95%;
+}
+
+#mob-footer-main-item{
+	width: 23%;
+}
+
+#mob-footer-main-icon{
+	width: 100%;
+}
+
+#mob-footer-sub-item{
+	width: 23%;
+}
+
+##mob-footer-main-icon{
+	width: 100%;
+}
+
 /**
 ---------------------------------Resume Page--------------------------------
 **/
