@@ -1002,6 +1002,7 @@ a .mw-itemTitle{
 	flex-direction: row;
 	width: 95%;
 	justify-content: center;
+	margin: 0 auto;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
 }
