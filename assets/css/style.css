@@ -985,7 +985,6 @@ a .mw-itemTitle{
 		margin: 0 auto;
 		margin-top: 7vw;
 		padding: 3vw 0;
-		border-radius: 5px;
 	}
 }
 
@@ -995,6 +994,7 @@ a .mw-itemTitle{
 	justify-content: space-around;
 	margin: 0 auto;
 	padding-bottom: 3vw;
+	border-radius: 5px;
 }
 
 #mobile-footer-sub{
@@ -1002,6 +1002,8 @@ a .mw-itemTitle{
 	flex-direction: row;
 	width: 95%;
 	justify-content: center;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
 }
 
 .mob-footer-main-item{
