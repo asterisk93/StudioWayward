@@ -983,6 +983,7 @@ a .mw-itemTitle{
 		width: 90%;
 		text-align: center;
 		margin: 0 auto;
+		margin-top: 5vw;
 	}
 }
 
@@ -990,6 +991,7 @@ a .mw-itemTitle{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	margin: 0 auto;
 }
 
 #mobile-footer-sub{
@@ -999,19 +1001,19 @@ a .mw-itemTitle{
 	width: 95%;
 }
 
-#mob-footer-main-item{
+.mob-footer-main-item{
 	width: 23%;
 }
 
-#mob-footer-main-icon{
+.mob-footer-main-icon{
 	width: 100%;
 }
 
-#mob-footer-sub-item{
+.mob-footer-sub-item{
 	width: 23%;
 }
 
-#mob-footer-sub-icon{
+.mob-footer-sub-icon{
 	width: 100%;
 }
 
