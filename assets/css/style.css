@@ -984,7 +984,6 @@ a .mw-itemTitle{
 		text-align: center;
 		margin: 0 auto;
 		margin-top: 7vw;
-		padding: 3vw 0;
 	}
 }
 
@@ -995,16 +994,18 @@ a .mw-itemTitle{
 	margin: 0 auto;
 	padding-bottom: 3vw;
 	border-radius: 5px;
+	padding-top: 2vw;
 }
 
 #mobile-footer-sub{
 	display: flex;
 	flex-direction: row;
-	width: 95%;
-	justify-content: center;
+	width: 90%;
+	justify-content: space-around;
 	margin: 0 auto;
 	border-bottom-left-radius: 5px;
 	border-bottom-right-radius: 5px;
+	padding-bottom: 2vw;
 }
 
 .mob-footer-main-item{
@@ -1016,8 +1017,7 @@ a .mw-itemTitle{
 }
 
 .mob-footer-sub-item{
-	width: 9%;
-	padding: 0 5vw;
+	width: 10%;
 }
 
 .mob-footer-sub-icon{
