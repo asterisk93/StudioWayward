@@ -52,6 +52,8 @@
 
 	</div>
 
+	{% if page.header contains "models" or page.type contains "model" %}
+
 	<div id="mobile-footer">
 		<div id="mobile-footer-main">
 
@@ -109,6 +111,68 @@
 
 		</div>
 	</div>
+
+	{% elsif page.header contains "photography" or page.type contains "photography" %}
+
+	<div id="mobile-footer">
+		<div id="mobile-footer-main">
+
+			<div class="mob-footer-main-item">
+				<a href="{{ site.baseurl }}/">
+					<img class="mob-footer-main-icon" src="{{ site.baseurl }}/assets/images/photography/SW-general-footer-smaller.png">
+				</a>
+			</div>
+
+			<div class="mob-footer-main-item">
+				<a href="{{ site.baseurl }}/models">
+					<img class="mob-footer-main-icon" src="{{ site.baseurl }}/assets/images/photography/mobile-mw-icon.png">
+				</a>
+			</div>
+
+			<div class="mob-footer-main-item">
+				<a href="{{ site.baseurl }}/photography">
+					<img class="mob-footer-main-icon" src="{{ site.baseurl }}/assets/images/photography/mobile-photo-icon.png">
+				</a>
+			</div>
+
+			<div class="mob-footer-main-item">
+				<a href="https://asterisk93.github.io/BiteSizeReviews/">
+					<img class="mob-footer-main-icon" src="{{ site.baseurl }}/assets/images/photography/mobile-bsr-icon.png">
+				</a>
+			</div>
+
+		</div>
+
+		<div id="mobile-footer-sub">
+			
+			<div class="mob-footer-sub-item">
+				<a href="https://twitter.com/asterisk93">
+					<img src="{{ site.baseurl }}/assets/images/photography/mobile-twitter.png" class="mob-footer-sub-icon">
+				</a>
+			</div>
+
+			<div class="mob-footer-sub-item">
+				<a href="https://www.redbubble.com/people/studio-wayward/shop?asc=u">
+					<img src="{{ site.baseurl }}/assets/images/photography/mobile-shirt.png" class="mob-footer-sub-icon">
+				</a>
+			</div>
+
+			<div class="mob-footer-sub-item">
+				<a href="https://www.instagram.com/studio_wayward/">
+					<img src="{{ site.baseurl }}/assets/images/photography/mobile-insta.png" class="mob-footer-sub-icon">
+				</a>
+			</div>
+
+			<div class="mob-footer-sub-item">
+				<a href="{{ site.baseurl }}/contact">
+					<img src="{{ site.baseurl }}/assets/images/photography/mobile-email.png" class="mob-footer-sub-icon">
+				</a>
+			</div>
+
+		</div>
+	</div>
+
+	{% endif %}
 
 {% if page.header contains "models" or page.type contains "model" %}
 
