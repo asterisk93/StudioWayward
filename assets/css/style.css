@@ -976,6 +976,10 @@ a .mw-itemTitle{
 }
 
 @media only screen and (max-width: 420px){
+
+	#footer-container{
+		display: none;
+	}
 	
 	#mobile-footer{
 		display: flex;
@@ -1039,11 +1043,24 @@ a .mw-itemTitle{
 	margin-top: 7vw;
 }
 
+@media only screen and (max-width: 420px){
+	#res-logoIMG{
+		width: 90%;
+		margin-top: 50%
+	}
+}
+
 #res-tagline{
 	font-family: steagisler;
 	font-size: 2vw;
 	margin-top: 3vw;
 	text-transform: uppercase;
+}
+
+@media only screen and (max-width: 420px){
+	#res-tagline{
+		font-size: 4vw;
+	}
 }
 
 #header-nav{
@@ -1055,13 +1072,33 @@ a .mw-itemTitle{
 
 }
 
-#res-nav{
+@media only screen and (max-width: 420px){
+	#header-nav{
+		margin-top: 16vw;
+		width: 50vw;
+	}
+}
+
+.res-nav{
 	font-size: 2.5vw;
 	font-family: steagisler;
 	border-bottom-style: solid;
 	border-bottom-width: 5px;
 	border-bottom-color: black;
 	margin: 0 1.5vw;  
+}
+
+@media only screen and (max-width: 420px){
+	.res-nav{
+		font-size: 7vw;
+		margin-bottom: 10vw;
+		border-bottom-style: none;
+	}
+
+	.res-nav a{
+		border-bottom-style: solid;
+		border-bottom-width: 5px;
+	}
 }
 
 #res-nav a{
