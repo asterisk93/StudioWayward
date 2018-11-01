@@ -1076,6 +1076,7 @@ a .mw-itemTitle{
 	#header-nav{
 		margin-top: 16vw;
 		width: 50vw;
+		flex-direction: column;
 	}
 }
 
@@ -1098,6 +1099,7 @@ a .mw-itemTitle{
 	.res-nav a{
 		border-bottom-style: solid;
 		border-bottom-width: 5px;
+		color: black;
 	}
 }
 
