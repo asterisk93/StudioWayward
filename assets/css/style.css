@@ -1544,7 +1544,13 @@ a .mw-itemTitle{
 	margin: 0 auto;
 	background-color: #d8d9dc;
 	margin-top: 90px;
+}
 
+@media only screen and (max-width: 420px){
+	.hist-item{
+		margin-top: 8vw;
+		width: 90%;
+	}
 }
 
 .hist-titlebar{
@@ -1560,8 +1566,21 @@ a .mw-itemTitle{
 	padding: 15px;
 }
 
+@media only screen and (max-width: 420px){
+	.hist-titlebar{
+		flex-direction: column;
+		justify-content: center;
+	}
+}
+
 .hist-graphic{
 	width: 12vw;
+}
+
+@media only screen and (max-width: 420px){
+	.hist-graphic{
+		width: 40vw;
+	}
 }
 
 .hist-title{
@@ -1570,10 +1589,24 @@ a .mw-itemTitle{
 	text-transform: uppercase;
 }
 
+@media only screen and (max-width: 420px){
+	.hist-title{
+		font-size: 7vw;
+		margin-top: 2vw;
+	}
+}
+
 .hist-date{
 	font-family: steagisler;
 	font-size: 1.2vw;
 	text-transform: uppercase;
+}
+
+@media only screen and (max-width: 420px){
+	.hist-date{
+		font-size: 5vw;
+		margin-top: 2vw;
+	}
 }
 
 .hist-blurb{
@@ -1589,6 +1622,13 @@ a .mw-itemTitle{
 
 .hist-blurb a{
 	color: #aa0000;
+}
+
+@media only screen and (max-width: 420px){
+	.hist-blurb{
+		padding: unset;
+		font-size: 4.3vw;
+	}
 }
 
 #contact-bar{
