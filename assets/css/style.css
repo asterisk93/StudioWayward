@@ -1335,6 +1335,7 @@ a .mw-itemTitle{
   		background-color: rgba(100,100,100,0.8);
   		border-radius: 5px;
   		margin: 5px;
+  		display: block;
 	}
 
 	.pj-prev, .pj-next{
