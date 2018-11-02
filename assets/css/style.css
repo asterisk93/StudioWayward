@@ -1279,6 +1279,13 @@ a .mw-itemTitle{
 	justify-content: space-between;
 }
 
+@media only screen and (max-width: 420px){
+	.pj-slidecont{
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
 .pj-slideNum{
 	font-family: helvetica;
 	background-color: rgba(100,100,100,0.8);
@@ -1308,6 +1315,12 @@ a .mw-itemTitle{
 	max-width: 46vw;
 	padding-top: 30px;
 	padding-bottom: 10px;
+}
+
+@media only screen and (max-width: 420px){
+	.pj-slideIMG{
+		width: 100%;
+	}
 }
 
 .pj-prev, .pj-next{
@@ -1358,6 +1371,12 @@ a .mw-itemTitle{
 	border-radius: 5px;
 }
 
+@media only screen and (max-width: 420px){
+	.pj-caption{
+		font-size: 4vw;
+	}
+}
+
 .pj-blurb{
 	box-sizing: border-box;
 	font-size: 1.2vw;
@@ -1396,6 +1415,13 @@ a .mw-itemTitle{
 	border-radius: 5px;
 	background-color: #aa0000;
 	width: 20%;
+}
+
+@media only screen and (max-width: 420px){
+	.pj-external{
+		width: 50%;
+		font-size: 5vw;
+	}
 }
 
 .pj-external a{
