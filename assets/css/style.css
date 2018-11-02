@@ -1320,6 +1320,9 @@ a .mw-itemTitle{
 @media only screen and (max-width: 420px){
 	.pj-slideIMG{
 		width: 100%;
+		max-width: unset;
+		max-height: unset;
+		height: unset;
 	}
 }
 
