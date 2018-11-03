@@ -1642,6 +1642,14 @@ a .mw-itemTitle{
 	margin-top: 80px;
 }
 
+@media only screen and (max-width: 420px){
+	#contact-bar{
+		width: 90%;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+}
+
 .contact-item{
 	box-sizing: border-box;
 	width: 20%;
@@ -1658,6 +1666,15 @@ a .mw-itemTitle{
 	color: #4a4a4a;
 }
 
+@media only screen and (max-width: 420px){
+	.contact-item{
+		box-sizing: unset;
+		width: 40%;
+		margin: 2vw;
+		border-width: 1vw;
+	}
+}
+
 .contact-ext{
 	border-color: #aa0000;
 }
@@ -1668,7 +1685,12 @@ a .mw-itemTitle{
 
 .contact-graphic{
 	width: 50%;
+}
 
+@media only screen and (max-width: 420px){
+	.contact-graphic{
+		padding: 2vw 0;
+	}
 }
 
 .contact-label{
@@ -1679,6 +1701,13 @@ a .mw-itemTitle{
 	padding-bottom: 15px;
 }
 
+@media only screen and (max-width: 420px){
+	.contact-label{
+		font-size: 5vw;
+		padding: 3vw 0;
+	}
+}
+
 .contact-info{
 	font-family: steagisler;
 	text-transform: uppercase; 
@@ -1687,4 +1716,11 @@ a .mw-itemTitle{
 
 #res-contact{
 	margin-bottom: 220px;
+}
+
+@media only screen and (max-width: 420px){
+	#res-contact{
+		min-height: 100vh;
+		margin-bottom: unset;
+	}
 }
