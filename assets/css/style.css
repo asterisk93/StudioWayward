@@ -1089,6 +1089,18 @@ a .mw-itemTitle{
 	margin: 0 1.5vw;  
 }
 
+#res-nav a{
+	color: black;
+}
+
+#res-nav:hover a{
+	color: #aa0000;
+}
+
+#res-nav:hover{
+	border-bottom-color: #aa0000;
+}
+
 @media only screen and (max-width: 420px){
 	.res-nav{
 		font-size: 7vw;
@@ -1101,18 +1113,6 @@ a .mw-itemTitle{
 		border-bottom-width: 5px;
 		color: black;
 	}
-}
-
-#res-nav a{
-	color: black;
-}
-
-#res-nav:hover a{
-	color: #aa0000;
-}
-
-#res-nav:hover{
-	border-bottom-color: #aa0000;
 }
 
 #res-projects{
@@ -1647,6 +1647,7 @@ a .mw-itemTitle{
 		width: 100%;
 		flex-wrap: wrap;
 		justify-content: center;
+		margin-top: 10vw;
 	}
 }
 
