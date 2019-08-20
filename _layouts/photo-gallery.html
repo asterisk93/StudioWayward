@@ -47,7 +47,9 @@ layout: wrapper
   	<span class="photo-modalExit" onclick="closeModal()">&times;</span>
 
   	{% for post in photos %}
-
+		
+	  	{% if post.type == "photography, picture" %}
+	  	
 			<div class="photo-modalSlide">
 									
 				<img class="photo-modalIMG" src="{{ site.baseurl }}/assets/images/photography/{{ post.keyword }}/{{ post.imgpath }}">
@@ -72,8 +74,10 @@ layout: wrapper
     			</div>
 
 			</div>
-
-	{% endfor %}
+		
+	  	{% endif %}
+	
+	  {% endfor %}
 
     <a class="photo-modalPrev" onclick="plusSlides(-1)">&#10094;</a>
     <a class="photo-ModalNext" onclick="plusSlides(1)">&#10095;</a>
