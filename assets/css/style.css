@@ -1365,7 +1365,7 @@ a .mw-itemTitle{
 
 .pj-caption{
 	font-family: helvetica;
-	font-size: 1.2vw;
+	font-size: 1vw;
 	width: 80%;
 	margin: 0 auto;
 	padding: 15px;
@@ -1382,7 +1382,7 @@ a .mw-itemTitle{
 
 .pj-blurb{
 	box-sizing: border-box;
-	font-size: 1.2vw;
+	font-size: 1vw;
 	font-family: helvetica;
 	padding: 30px;
 	background-color: #d8d9dc;
@@ -1611,7 +1611,7 @@ a .mw-itemTitle{
 
 .hist-blurb{
 	width: 80%;
-	font-size: 1.2vw;
+	font-size: 1vw;
 	font-family: helvetica;
 	margin: 0 auto;
 	padding: 30px;
