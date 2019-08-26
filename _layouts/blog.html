@@ -29,7 +29,7 @@ layout: wrapper
 				{% if page.keyword contains entry.keyword %}
 				<div class="blog-page">
 
-					{{ page.content }}
+					{{ page.content | remove: '<p>' | remove: '</p>' }}
 
 				</div>
 				{% endif %}
