@@ -1,3 +1,51 @@
 ---
 layout: wrapper
 ---
+
+{% assign entries = site.posts | where:"type","blog-post" %}
+{% assign pages = site.posts | where:"type", "blog-img" %}
+
+
+<div  id="blog-container">
+
+	<div id="blog-list">
+		
+		{% for entry in entries %}
+		<div id="blog-entry-container">
+			
+			<div id="blog-entry-header">
+				
+				<div id="blog-entry-title">{{ entry.title }}</div>
+
+				<div id="blog-entry-date">{{ entry.date }}</div>
+
+				<div id="blog-entry-length">{{ entry.length }}</div>
+
+			</div>
+
+			<div id="blog-page-container">
+				
+				{% for page in pages %}
+				{% if page.keyword contains entry.keyword %}
+				<div class="blog-page">
+
+					{ page.content }
+
+				</div>
+				{% endif %}
+				{% endfor %}
+
+				<div class="blog-entry-permalink">
+
+					<a href="{{ site.baseurl }}/{{ entry.url }}">Permalink</a>
+
+				</div>
+
+			</div>
+
+		</div>
+		{% endfor %}
+
+	</div>
+	
+</div>
