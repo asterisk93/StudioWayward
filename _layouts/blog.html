@@ -28,7 +28,7 @@ layout: wrapper
 				{% for page in pages %}
 				{% if page.keyword contains entry.keyword %}
 				<div class="blog-page">
-					<img src="{{page.img-url}}">
+					<img class="page-img" src="{{page.img-url}}">
 					{{ page.content | remove: '<p>' | remove: '</p>' }}
 
 				</div>
