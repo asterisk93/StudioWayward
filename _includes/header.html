@@ -253,10 +253,26 @@
 {% elsif page.header contains "blog" or page.type contains "blog-post" %}
 
 <div id="header-bar">
+	
 	<a href="{{ site.baseurl }}/blog">
+		
 		<div id="header-txt">Adventure Log: An Analog Blog</div>
 	</a>
 
+</div>
+
+<div id="menubar">
+	
+	<div id="about-btn">
+		
+		<a href="{{ site.baseurl }}/blog">
+			
+			<div id="about-text">-?-</div>
+			
+		</a>
+		
+	</div>
+	
 </div>
 
 <style type="text/css">
@@ -279,6 +295,10 @@
 		margin-bottom: 1vw;
 	}
 	
+	#header-bar:hover{
+		border-color: white;
+	}
+	
 	#header-txt{
 		font-size: 2vw;
 		font-family: early_gameboy;
@@ -290,6 +310,30 @@
 	
 	a #header-txt{
 		color: white;
+	}
+	
+	a header-text:hover{
+		color: LimeGreen;
+	}
+	
+	#menubar{
+		display: flex;
+		justify-content: center;
+		margin-top: 1%;
+	}
+	
+	#about-btn{
+		font-size: 1vw;
+		fonti-family: early_gameboy;
+		text-align: center;
+	}
+	
+	a #about-btn{
+		color: white;
+	}
+	
+	a #about-btn:hover{
+		color: gold;
 	}
 	
 </style>
