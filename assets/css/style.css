@@ -26,6 +26,10 @@ a {
 	src: url('fonts/Steagisler.otf');
 }
 
+@font-face{
+	font-family: 'gameboy';	
+	src: url('fonts/Early GameBoy.ttf');
+}
 
 /**
 ---------------------------------SW Homepage---------------------------------
