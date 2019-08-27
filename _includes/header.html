@@ -249,4 +249,22 @@
 	}
 
 </style>
+
+{% elsif page.header contains "blog" or page.type contains "blog-post" %}
+
+<div id="header-bar">
+	<a href="{{ site.baseurl }}/blog">
+		<span>Adventure Log: An Analog Blog</span>
+	</a>
+
+</div>
+
+<style type="text/css">
+	
+	body{
+		background-color: SeaGreen;
+	}
+	
+</style>
+
 {% endif %}
