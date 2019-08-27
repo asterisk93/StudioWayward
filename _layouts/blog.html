@@ -11,19 +11,19 @@ layout: wrapper
 	<div id="blog-list">
 		
 		{% for entry in entries %}
-		<div id="blog-entry-container">
+		<div class="blog-entry-container">
 			
-			<div id="blog-entry-header">
+			<div class="blog-entry-header">
 				
-				<div id="blog-entry-title">{{ entry.title }}</div>
+				<div class="blog-entry-title">{{ entry.title }}</div>
 
-				<div id="blog-entry-date">{{ entry.date }}</div>
+				<div class="blog-entry-date">{{ entry.date }}</div>
 
-				<div id="blog-entry-length">{{ entry.length }}</div>
+				<div class="blog-entry-length">{{ entry.length }}</div>
 
 			</div>
 
-			<div id="blog-page-container">
+			<div class="blog-page-container">
 				
 				{% for page in pages %}
 				{% if page.keyword contains entry.keyword %}
