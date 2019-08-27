@@ -27,8 +27,8 @@ a {
 }
 
 @font-face{
-	font-family: 'gameboy';	
-	src: url('fonts/Early_GameBoy.ttf');
+	font-family: 'early_gameboy';	
+	src: url('fonts/Early_GameBoy.otf');
 }
 
 /**
