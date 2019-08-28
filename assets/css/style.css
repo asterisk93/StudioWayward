@@ -1745,7 +1745,8 @@ a .mw-itemTitle{
 }
 
 #blog-list{
-	
+	width: 65%;
+	margin: 0 auto;
 }
 
 .blog-entry-container{
@@ -1773,11 +1774,12 @@ a .mw-itemTitle{
 }
 
 .blog-page{
-	
+	position: relative;
+	padding: 2%;
 }
 
 .page-img{
-	
+	width: 100%;
 }
 
 .blog-entry-permalink{
