@@ -1755,18 +1755,24 @@ a .mw-itemTitle{
 
 .blog-entry-header{
 	background-color: NavajoWhite;
+	display: flex;
+	justify-content: space-between;
+	padding: 2%;
 }
 
 .blog-entry-title{
-	
+	font-size: 1vw;
+	font-family: early_gameboy;
 }
 
 .blog-entry-date{
-
+	font-size: 1vw;
+	font-family: early_gameboy;
 }
 
 .blog-entry-length{
-	
+	font-size: 1vw;
+	font-family: early_gameboy;
 }
 
 .blog-page-container{
