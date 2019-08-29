@@ -5,6 +5,7 @@ layout: wrapper
 {% assign entries = site.posts | where:"type","blog-post" %}
 {% assign pages = site.posts | where:"type", "blog-img" %}
 
+<div></div>
 
 <div  id="blog-container">
 
@@ -15,12 +16,16 @@ layout: wrapper
 			
 			<div class="blog-entry-header">
 				
+				<div class="blog-entry-date">{{ entry.dateline }}</div>
+
 				<div class="blog-entry-title">{{ entry.title }}</div>
-
-				<div class="blog-entry-date">{{ entry.date }}</div>
-
-				<div class="blog-entry-length">{{ entry.length }}</div>
-
+				
+				{% if entry.length == "1" %}
+				<div class="blog-entry-length">Single Page</div>
+				
+				{% else %}
+				<div class="blog-entry-length">{{ entry.length }} Pages</div>
+				{% endif %}
 			</div>
 
 			<div class="blog-page-container">
