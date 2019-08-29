@@ -1764,13 +1764,13 @@ a .mw-itemTitle{
 	font-size: 1vw;
 	font-family: early_gameboy;
 	width: 33%;
+	text-align: center;
 }
 
 .blog-entry-date{
 	font-size: 1vw;
 	font-family: early_gameboy;
 	width: 33%;
-	text-align: center;
 }
 
 .blog-entry-length{
