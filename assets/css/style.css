@@ -1753,6 +1753,17 @@ a .mw-itemTitle{
 	
 }
 
+.blog-entry-hidden{
+	max-height: 0;
+	transition:max-height 1s ease-out;
+}
+
+.blog-header-closed{
+	border-radius: 6px;
+}
+
+
+
 .blog-entry-header{
 	background-color: NavajoWhite;
 	display: flex;
