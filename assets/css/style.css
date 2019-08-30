@@ -1793,6 +1793,8 @@ a .mw-itemTitle{
 
 .blog-page-container{
 	background-color: BurlyWood;
+	transition:max-height 1s ease-out;
+	overflow: hidden;
 }
 
 .blog-page{
