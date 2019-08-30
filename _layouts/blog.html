@@ -54,3 +54,22 @@ layout: wrapper
 	</div>
 	
 </div>
+
+<script>
+	function showEntry(ent, ent_head) {
+		var j;
+		var entry = document.getElementById(ent);
+		var header = document.getElementById(ent_head);
+		
+		if (entry.classList.contains("blog-entry-hidden")){
+			entry.classList.remove("blog-entry-hidden");
+			header.classList.remove("blog-header-closed");
+		}
+		
+		else{
+			entry.classlist.add("blog-entry-hidden");
+			header.classList.add("blog-header-closed");
+		}
+	}		
+			
+</script>
