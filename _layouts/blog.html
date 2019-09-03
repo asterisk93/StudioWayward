@@ -62,11 +62,15 @@ layout: wrapper
 		
 		if (entry.classList.contains("blog-entry-show")){
 			entry.classList.remove("blog-entry-show");
+			entry.classList.add("blog-entry-hide");
 			header.classList.remove("blog-header-open");
+			header.classList.add("blog-header-closed");
 		}
 		
 		else{
+			entry.classList.remove("blog-entry-hide");
 			entry.classList.add("blog-entry-show");
+			header.classList.remove("blog-header-closed");
 			header.classList.add("blog-header-open");
 		}
 	}		
