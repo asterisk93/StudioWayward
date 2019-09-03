@@ -14,7 +14,7 @@ layout: wrapper
 		{% for entry in entries %}
 		<div class="blog-entry-container">
 			
-			<div class="blog-entry-header blog-header-closed" id="head_{{ entry.keyword }}" onclick="showEntry('entry_{{ entry.keyword }}', 'head_{{ entry.keyword }}')">
+			<div class="blog-entry-header" id="head_{{ entry.keyword }}" onclick="showEntry('entry_{{ entry.keyword }}', 'head_{{ entry.keyword }}')">
 				
 				<div class="blog-entry-date">{{ entry.dateline }}</div>
 
@@ -28,7 +28,7 @@ layout: wrapper
 				{% endif %}
 			</div>
 
-			<div class="blog-page-container blog-entry-hidden" id="entry_{{ entry.keyword }}">
+			<div class="blog-page-container" id="entry_{{ entry.keyword }}">
 				
 				{% for page in pages %}
 				{% if page.keyword contains entry.keyword %}
@@ -60,14 +60,14 @@ layout: wrapper
 		var entry = document.getElementById(ent);
 		var header = document.getElementById(ent_head);
 		
-		if (entry.classList.contains("blog-entry-hidden")){
-			entry.classList.remove("blog-entry-hidden");
-			header.classList.remove("blog-header-closed");
+		if (entry.classList.contains("blog-entry-show")){
+			entry.classList.remove("blog-entry-show");
+			header.classList.remove("blog-header-open");
 		}
 		
 		else{
-			entry.classList.add("blog-entry-hidden");
-			header.classList.add("blog-header-closed");
+			entry.classList.add("blog-entry-show");
+			header.classList.add("blog-header-open");
 		}
 	}		
 			
