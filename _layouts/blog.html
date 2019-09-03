@@ -14,7 +14,7 @@ layout: wrapper
 		{% for entry in entries %}
 		<div class="blog-entry-container">
 			
-			<div class="blog-entry-header" id="head_{{ entry.keyword }}" onclick="showEntry('entry_{{ entry.keyword }}', 'head_{{ entry.keyword }}')">
+			<div id="head_{{ entry.keyword }}" class="blog-entry-header" onclick="showEntry('entry_{{ entry.keyword }}', 'head_{{ entry.keyword }}')">
 				
 				<div class="blog-entry-date">{{ entry.dateline }}</div>
 
@@ -28,7 +28,7 @@ layout: wrapper
 				{% endif %}
 			</div>
 
-			<div class="blog-page-container" id="entry_{{ entry.keyword }}">
+			<div id="entry_{{ entry.keyword }}" class="blog-page-container">
 				
 				{% for page in pages %}
 				{% if page.keyword contains entry.keyword %}
