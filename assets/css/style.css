@@ -1795,6 +1795,7 @@ a .mw-itemTitle{
 	background-color: BurlyWood;
 	transition:max-height 1s ease-out;
 	overflow: hidden;
+	max-height: 0px;
 }
 
 .blog-page{
