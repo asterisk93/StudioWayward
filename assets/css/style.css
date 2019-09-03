@@ -1758,17 +1758,23 @@ a .mw-itemTitle{
 	transition:max-height 1s ease-out;
 }
 
+.blog-entry-hide{
+	max-height: 0px;
+	transition:max-height 1s ease-out;
+}
+
 .blog-header-open{
 	border-radius: 6px 6px 0 0;
 }
 
-
+.blog-header-closed{
+	border-radius: 6px 6px 6px 6px;
+}
 
 .blog-entry-header{
 	background-color: NavajoWhite;
 	display: flex;
 	padding: 2%;
-	border-radius: 6px;
 }
 
 .blog-entry-title{
@@ -1793,9 +1799,7 @@ a .mw-itemTitle{
 
 .blog-page-container{
 	background-color: BurlyWood;
-	transition:max-height 1s ease-out;
 	overflow: hidden;
-	max-height: 0px;
 }
 
 .blog-page{
