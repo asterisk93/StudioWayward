@@ -1753,24 +1753,6 @@ a .mw-itemTitle{
 	
 }
 
-.blog-entry-show{
-	max-height: 50000px;
-	transition:max-height 1s ease-out;
-}
-
-.blog-entry-hide{
-	max-height: 0px;
-	transition:max-height 1s ease-out;
-}
-
-.blog-header-open{
-	border-radius: 6px 6px 0 0;
-}
-
-.blog-header-closed{
-	border-radius: 6px 6px 6px 6px;
-}
-
 .blog-entry-header{
 	background-color: NavajoWhite;
 	display: flex;
@@ -1800,6 +1782,12 @@ a .mw-itemTitle{
 .blog-page-container{
 	background-color: BurlyWood;
 	overflow: hidden;
+	-moz-transition: height .5s;
+  	-ms-transition: height .5s;
+  	-o-transition: height .5s;
+  	-webkit-transition: height .5s;
+  	transition: height .5s;
+  	height: 0;
 }
 
 .blog-page{
