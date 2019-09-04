@@ -14,7 +14,7 @@ layout: wrapper
 		{% for entry in entries %}
 		<div class="blog-entry-container">
 			
-			<div id="head_{{ entry.keyword }}" class="blog-entry-header blog-header-closed" onclick="showEntry('entry_{{ entry.keyword }}', 'head_{{ entry.keyword }}')">
+			<div id="head_{{ entry.keyword }}" class="blog-entry-header blog-header-closed" onclick="showEntry('entry_{{ entry.keyword }}', 'measure_{{ entry.keyword }}', 'head_{{ entry.keyword }}')">
 				
 				<div class="blog-entry-date">{{ entry.dateline }}</div>
 
@@ -28,17 +28,20 @@ layout: wrapper
 				{% endif %}
 			</div>
 
-			<div id="entry_{{ entry.keyword }}" class="blog-page-container blog-entry-hide">
+			<div id="entry_{{ entry.keyword }}" class="blog-page-container">
+				<div id="measure_{{ entry.keyword }}">
 				
-				{% for page in pages %}
-				{% if page.keyword contains entry.keyword %}
-				<div class="blog-page">
-					<img class="page-img" src="{{page.img-url}}">
-					{{ page.content | remove: '<p>' | remove: '</p>' }}
+					{% for page in pages %}
+					{% if page.keyword contains entry.keyword %}
+					<div class="blog-page">
+						<img class="page-img" src="{{page.img-url}}">
+						{{ page.content | remove: '<p>' | remove: '</p>' }}
 
+					</div>
+					{% endif %}
+					{% endfor %}
+					
 				</div>
-				{% endif %}
-				{% endfor %}
 
 				<div class="blog-entry-permalink">
 
@@ -56,23 +59,21 @@ layout: wrapper
 </div>
 
 <script>
-	function showEntry(ent, ent_head) {
+	function showEntry(ent, ent_measure, ent_head) {
 		var entry = document.getElementById(ent);
+		var measure = document.getElementById(ent_measure);
 		var header = document.getElementById(ent_head);
 		
-		if (entry.classList.contains("blog-entry-show")){
-			entry.classList.remove("blog-entry-show");
-			entry.classList.add("blog-entry-hide");
-			header.classList.remove("blog-header-open");
-			header.classList.add("blog-header-closed");
+		if(entry.clientHeight) {
+			entry.style.height = 0;
+			header.style.borderRadius = "6px"
 		}
 		
 		else{
-			entry.classList.remove("blog-entry-hide");
-			entry.classList.add("blog-entry-show");
-			header.classList.remove("blog-header-closed");
-			header.classList.add("blog-header-open");
+			entry.style.height = measure.clientHeight + "px";
+			header.style.borderRadius = "6px 6px 0px 0px"
 		}
+		
 	}		
 			
 </script>
