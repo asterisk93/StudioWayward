@@ -1757,6 +1757,7 @@ a .mw-itemTitle{
 	background-color: NavajoWhite;
 	display: flex;
 	padding: 2%;
+	border-radius: 6px;
 }
 
 .blog-entry-title{
