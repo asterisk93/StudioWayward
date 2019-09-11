@@ -5,7 +5,6 @@ layout: wrapper
 {% assign entries = site.posts | where:"type","blog-post" %}
 {% assign pages = site.posts | where:"type", "blog-img" %}
 
-<div></div>
 
 <div  id="blog-container">
 
@@ -53,6 +52,10 @@ layout: wrapper
 
 		</div>
 		{% endfor %}
+		
+		<div id="post-it-container" onclick="closePostIt()">
+			<p id="post-it-content">placeholder</p>
+		</div>
 
 	</div>
 	
@@ -74,6 +77,23 @@ layout: wrapper
 			header.style.borderRadius = "6px 6px 0px 0px"
 		}
 		
-	}		
+	}
+	
+	function showPostIt(note_text) {
+		var postIt = document.getElementById(post-it-container);
+		var note = document.getElementById(post-it-content);
+		
+		note.innerHTML = note_text;	
+		postIt.style.display = "block";
+	}
+	
+	function closePostIt() {
+		var postIt = document.getElementById(post-it-container);
+		var note = document.getElementById(post-it-content);
+		
+		note.innerHTML = "";	
+		postIt.style.display = "none";
+	}
+		
 			
 </script>
