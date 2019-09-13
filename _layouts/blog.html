@@ -3,7 +3,7 @@ layout: wrapper
 ---
 
 {% assign entries = site.posts | where:"type","blog-post" %}
-{% assign pages = site.posts | where:"type", "blog-img" %}
+{% assign pages = site.posts | reverse | where:"type", "blog-img" %}
 
 
 <div  id="blog-container">
